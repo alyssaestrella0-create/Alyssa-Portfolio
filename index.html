@@ -61,18 +61,18 @@
     }
 
     section {
-      padding: 105px 0;
+      padding: 100px 0;
     }
 
     h1,
     h2 {
       font-family: var(--serif);
       font-weight: 500;
-      line-height: .98;
     }
 
     h2 {
-      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-size: clamp(2.8rem, 5vw, 4.8rem);
+      line-height: 1;
       letter-spacing: -.035em;
       margin-bottom: 22px;
     }
@@ -83,7 +83,7 @@
 
     .eyebrow {
       display: inline-block;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       color: var(--taupe);
       font-size: .7rem;
       font-weight: 700;
@@ -100,7 +100,7 @@
       max-width: 650px;
     }
 
-    /* NAV */
+    /* NAVIGATION */
 
     nav {
       position: sticky;
@@ -153,8 +153,8 @@
     /* BUTTONS */
 
     .btn {
-      min-height: 50px;
-      padding: 0 25px;
+      min-height: 48px;
+      padding: 0 24px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -189,20 +189,27 @@
       min-height: calc(100vh - 76px);
       display: flex;
       align-items: center;
-      padding: 90px 0;
+      padding: 58px 0 68px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.35fr .65fr;
-      gap: 85px;
+      grid-template-columns: minmax(0, 1.45fr) minmax(280px, .55fr);
+      gap: 70px;
       align-items: center;
+      width: 100%;
+    }
+
+    .hero-main {
+      min-width: 0;
     }
 
     .hero h1 {
-      margin-bottom: 30px;
-      font-size: clamp(3.7rem, 6.7vw, 6.2rem);
-      letter-spacing: -.055em;
+      max-width: 800px;
+      margin-bottom: 24px;
+      font-size: clamp(3.7rem, 5.2vw, 5.3rem);
+      line-height: .92;
+      letter-spacing: -.05em;
     }
 
     .hero h1 span {
@@ -210,9 +217,10 @@
     }
 
     .hero-description {
-      max-width: 700px;
-      margin-bottom: 35px;
-      font-size: 1.05rem;
+      max-width: 680px;
+      margin-bottom: 28px;
+      font-size: .96rem;
+      line-height: 1.75;
     }
 
     .hero-buttons {
@@ -227,7 +235,7 @@
     }
 
     .hero-side-title {
-      margin-bottom: 16px;
+      margin-bottom: 12px;
       color: var(--taupe);
       font-size: .68rem;
       font-weight: 700;
@@ -240,10 +248,10 @@
     }
 
     .hero-side li {
-      padding: 14px 0;
+      padding: 13px 0;
       border-bottom: 1px solid var(--border);
       font-family: var(--serif);
-      font-size: 1.4rem;
+      font-size: 1.3rem;
     }
 
     /* INTRO */
@@ -302,7 +310,7 @@
       font-size: 1.85rem;
     }
 
-    /* WORK */
+    /* SELECTED WORK */
 
     .work {
       background: var(--white);
@@ -333,6 +341,7 @@
       margin-bottom: 17px;
       font-family: var(--serif);
       font-size: clamp(2rem, 4vw, 3.05rem);
+      line-height: 1.05;
     }
 
     .project-description {
@@ -397,6 +406,7 @@
       margin-bottom: 6px;
       font-family: var(--serif);
       font-size: 1.65rem;
+      line-height: 1.15;
     }
 
     .experience-date {
@@ -543,6 +553,23 @@
       transform: translateY(0);
     }
 
+    /* SMALLER LAPTOPS */
+
+    @media(max-width: 1200px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1.35fr) minmax(250px, .65fr);
+        gap: 50px;
+      }
+
+      .hero h1 {
+        font-size: clamp(3.5rem, 5vw, 4.8rem);
+      }
+
+      .hero-side {
+        padding-left: 30px;
+      }
+    }
+
     /* TABLET */
 
     @media(max-width: 900px) {
@@ -591,6 +618,7 @@
 
       .hero {
         min-height: auto;
+        padding: 70px 0;
       }
 
       .hero-grid,
@@ -600,6 +628,11 @@
       .about-grid {
         grid-template-columns: 1fr;
         gap: 38px;
+      }
+
+      .hero h1 {
+        max-width: 700px;
+        font-size: clamp(3.5rem, 9vw, 5rem);
       }
 
       .hero-side {
@@ -623,13 +656,24 @@
       }
     }
 
+    /* MOBILE */
+
     @media(max-width: 560px) {
+      .container {
+        width: 88%;
+      }
+
       .hero {
-        padding: 65px 0;
+        padding: 55px 0 65px;
       }
 
       .hero h1 {
-        font-size: clamp(3.2rem, 15vw, 4.8rem);
+        font-size: clamp(3rem, 14vw, 4.2rem);
+        line-height: .94;
+      }
+
+      .hero-description {
+        font-size: .92rem;
       }
 
       .hero-buttons,
@@ -704,7 +748,7 @@
   <header class="hero" id="home">
     <div class="container hero-grid">
 
-      <div>
+      <div class="hero-main">
 
         <span class="eyebrow">
           Customer Support × Business Operations
@@ -712,7 +756,7 @@
 
         <h1>
           Supporting customers.<br>
-          Keeping <span>operations moving.</span>
+          Keeping operations <span>moving.</span>
         </h1>
 
         <p class="hero-description">
@@ -724,13 +768,19 @@
         </p>
 
         <div class="hero-buttons">
-          <a href="#work" class="btn btn-dark">View My Work</a>
+
+          <a href="#work" class="btn btn-dark">
+            View My Work
+          </a>
+
           <a href="resume.pdf" target="_blank" class="btn btn-light">
             View Resume
           </a>
+
         </div>
 
       </div>
+
 
       <aside class="hero-side">
 
@@ -757,7 +807,9 @@
     <div class="container intro-grid fade-up">
 
       <div>
-        <span class="eyebrow">What I Bring</span>
+        <span class="eyebrow">
+          What I Bring
+        </span>
       </div>
 
       <p class="intro-copy">
@@ -777,9 +829,13 @@
 
       <div class="section-heading fade-up">
 
-        <span class="eyebrow">Expertise</span>
+        <span class="eyebrow">
+          Expertise
+        </span>
 
-        <h2>How I can help.</h2>
+        <h2>
+          How I can help.
+        </h2>
 
         <p>
           My experience combines customer-facing support with the
@@ -794,9 +850,13 @@
 
         <div class="service">
 
-          <div class="service-number">01</div>
+          <div class="service-number">
+            01
+          </div>
 
-          <h3>Customer Support & Experience</h3>
+          <h3>
+            Customer Support & Experience
+          </h3>
 
           <p>
             Chat, email and phone support, ticket management,
@@ -809,9 +869,13 @@
 
         <div class="service">
 
-          <div class="service-number">02</div>
+          <div class="service-number">
+            02
+          </div>
 
-          <h3>Business Operations</h3>
+          <h3>
+            Business Operations
+          </h3>
 
           <p>
             Workflow coordination, scheduling support, service
@@ -824,9 +888,13 @@
 
         <div class="service">
 
-          <div class="service-number">03</div>
+          <div class="service-number">
+            03
+          </div>
 
-          <h3>CRM & Process Management</h3>
+          <h3>
+            CRM & Process Management
+          </h3>
 
           <p>
             CRM management, lead tracking, record accuracy,
@@ -839,9 +907,13 @@
 
         <div class="service">
 
-          <div class="service-number">04</div>
+          <div class="service-number">
+            04
+          </div>
 
-          <h3>Digital Business Support</h3>
+          <h3>
+            Digital Business Support
+          </h3>
 
           <p>
             Website management, Wix, local SEO, business listings,
@@ -852,6 +924,7 @@
         </div>
 
       </div>
+
     </div>
   </section>
 
@@ -863,9 +936,13 @@
 
       <div class="section-heading fade-up">
 
-        <span class="eyebrow">Selected Work</span>
+        <span class="eyebrow">
+          Selected Work
+        </span>
 
-        <h2>Experience in action.</h2>
+        <h2>
+          Experience in action.
+        </h2>
 
         <p>
           A closer look at how I've supported customers, improved
@@ -910,9 +987,8 @@
 
           <li>
             <strong>Challenge:</strong>
-            Manage a high-volume support queue while handling
-            account, payment, and card-related customer concerns
-            accurately.
+            Manage a high-volume support queue while handling account,
+            payment, and card-related customer concerns accurately.
           </li>
 
           <li>
@@ -1212,8 +1288,6 @@
 
       <div class="fade-up">
 
-        <!-- CURRENT ROLE -->
-
         <div class="experience-item">
 
           <div>
@@ -1410,6 +1484,7 @@
         </div>
 
       </div>
+
     </div>
   </section>
 
@@ -1508,6 +1583,7 @@
         </div>
 
       </div>
+
     </div>
   </section>
 
