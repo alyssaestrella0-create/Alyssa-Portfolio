@@ -6,7 +6,10 @@
 
   <title>Alyssa Estrella | Customer Support & Business Operations</title>
 
-  <meta name="description" content="Portfolio of Alyssa Mae M. Estrella, a Customer Support & Business Operations Specialist experienced in customer experience, CRM, remote operations, administrative support, documentation, and digital business support.">
+  <meta
+    name="description"
+    content="Portfolio of Alyssa Mae M. Estrella, a Customer Support & Business Operations Specialist experienced in customer experience, CRM, remote operations, administrative support, documentation, and digital business support."
+  >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,7 +64,8 @@
       padding: 105px 0;
     }
 
-    h1, h2 {
+    h1,
+    h2 {
       font-family: var(--serif);
       font-weight: 500;
       line-height: .98;
@@ -102,7 +106,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(247,244,239,.96);
+      background: rgba(247, 244, 239, .96);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
     }
@@ -197,7 +201,7 @@
 
     .hero h1 {
       margin-bottom: 30px;
-      font-size: clamp(4rem, 8.5vw, 7.4rem);
+      font-size: clamp(3.7rem, 6.7vw, 6.2rem);
       letter-spacing: -.055em;
     }
 
@@ -262,7 +266,7 @@
     .intro-copy {
       color: #E8E1D9;
       font-family: var(--serif);
-      font-size: clamp(2rem,4vw,3.4rem);
+      font-size: clamp(2rem, 4vw, 3.4rem);
       line-height: 1.25;
     }
 
@@ -270,7 +274,7 @@
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(2,1fr);
+      grid-template-columns: repeat(2, 1fr);
       border-top: 1px solid var(--border);
     }
 
@@ -328,7 +332,7 @@
     .project h3 {
       margin-bottom: 17px;
       font-family: var(--serif);
-      font-size: clamp(2rem,4vw,3.05rem);
+      font-size: clamp(2rem, 4vw, 3.05rem);
     }
 
     .project-description {
@@ -354,7 +358,7 @@
 
     .project-details li {
       position: relative;
-      padding: 10px 0 10px 25px;
+      padding: 14px 0 14px 25px;
       color: var(--gray);
       border-bottom: 1px solid #ECE7E0;
     }
@@ -364,6 +368,11 @@
       position: absolute;
       left: 0;
       color: var(--brown);
+    }
+
+    .project-details strong {
+      color: var(--black);
+      font-weight: 600;
     }
 
     /* EXPERIENCE */
@@ -409,7 +418,7 @@
 
     .tools-grid {
       display: grid;
-      grid-template-columns: repeat(4,1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 18px;
     }
 
@@ -536,7 +545,7 @@
 
     /* TABLET */
 
-    @media(max-width:900px) {
+    @media(max-width: 900px) {
       section {
         padding: 82px 0;
       }
@@ -610,13 +619,17 @@
       }
 
       .tools-grid {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    @media(max-width:560px) {
+    @media(max-width: 560px) {
+      .hero {
+        padding: 65px 0;
+      }
+
       .hero h1 {
-        font-size: clamp(3.5rem,17vw,5.2rem);
+        font-size: clamp(3.2rem, 15vw, 4.8rem);
       }
 
       .hero-buttons,
@@ -637,7 +650,7 @@
       }
     }
 
-    @media(prefers-reduced-motion:reduce) {
+    @media(prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;
       }
@@ -653,828 +666,1070 @@
 
 <body>
 
-<nav>
-  <div class="container nav-inner">
-    <a href="#home" class="logo">Hello.</a>
+  <!-- NAVIGATION -->
 
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#expertise">Expertise</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#tools">Tools</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <nav>
+    <div class="container nav-inner">
 
-    <a href="#contact" class="btn btn-dark desktop-contact">
-      Let's Connect
-    </a>
+      <a href="#home" class="logo">Hello.</a>
 
-    <button class="menu-button" id="menuButton" aria-label="Open menu" aria-expanded="false">
-      MENU
-    </button>
-  </div>
-</nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="btn btn-dark desktop-contact">
+        Let's Connect
+      </a>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        MENU
+      </button>
+
+    </div>
+  </nav>
 
 
-<!-- HERO -->
+  <!-- HERO -->
 
-<header class="hero" id="home">
-  <div class="container hero-grid">
+  <header class="hero" id="home">
+    <div class="container hero-grid">
 
-    <div>
+      <div>
+
+        <span class="eyebrow">
+          Customer Support × Business Operations
+        </span>
+
+        <h1>
+          Supporting customers.<br>
+          Keeping <span>operations moving.</span>
+        </h1>
+
+        <p class="hero-description">
+          I'm Alyssa, a Customer Support & Business Operations Specialist
+          with 4+ years of experience supporting international customers,
+          remote teams, and growing businesses. My experience combines
+          customer service, CRM management, administrative support,
+          documentation, workflow coordination, and digital business support.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#work" class="btn btn-dark">View My Work</a>
+          <a href="resume.pdf" target="_blank" class="btn btn-light">
+            View Resume
+          </a>
+        </div>
+
+      </div>
+
+      <aside class="hero-side">
+
+        <div class="hero-side-title">
+          Core Strengths
+        </div>
+
+        <ul>
+          <li>Customer Experience</li>
+          <li>Business Operations</li>
+          <li>CRM & Workflows</li>
+          <li>Digital Support</li>
+        </ul>
+
+      </aside>
+
+    </div>
+  </header>
+
+
+  <!-- INTRO -->
+
+  <section class="intro">
+    <div class="container intro-grid fade-up">
+
+      <div>
+        <span class="eyebrow">What I Bring</span>
+      </div>
+
+      <p class="intro-copy">
+        I help businesses create a better customer experience
+        while keeping the systems, communication, and day-to-day
+        work behind it organized.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- EXPERTISE -->
+
+  <section id="expertise">
+    <div class="container">
+
+      <div class="section-heading fade-up">
+
+        <span class="eyebrow">Expertise</span>
+
+        <h2>How I can help.</h2>
+
+        <p>
+          My experience combines customer-facing support with the
+          operational systems, documentation, and digital work that
+          keep a business organized behind the scenes.
+        </p>
+
+      </div>
+
+
+      <div class="services-grid fade-up">
+
+        <div class="service">
+
+          <div class="service-number">01</div>
+
+          <h3>Customer Support & Experience</h3>
+
+          <p>
+            Chat, email and phone support, ticket management,
+            customer inquiries, account and payment support,
+            issue resolution, escalation, and follow-up.
+          </p>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-number">02</div>
+
+          <h3>Business Operations</h3>
+
+          <p>
+            Workflow coordination, scheduling support, service
+            coordination, vendor communication, reporting,
+            process tracking, and administrative support.
+          </p>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-number">03</div>
+
+          <h3>CRM & Process Management</h3>
+
+          <p>
+            CRM management, lead tracking, record accuracy,
+            follow-up workflows, SOPs, training guides,
+            checklists, documentation, and process improvement.
+          </p>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-number">04</div>
+
+          <h3>Digital Business Support</h3>
+
+          <p>
+            Website management, Wix, local SEO, business listings,
+            social media, content support, Meta Business Suite,
+            Canva, research, and outbound campaigns.
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SELECTED WORK -->
+
+  <section class="work" id="work">
+    <div class="container">
+
+      <div class="section-heading fade-up">
+
+        <span class="eyebrow">Selected Work</span>
+
+        <h2>Experience in action.</h2>
+
+        <p>
+          A closer look at how I've supported customers, improved
+          day-to-day operations, organized systems, and helped remote
+          businesses stay on track.
+        </p>
+
+      </div>
+
+
+      <!-- PROJECT 01 -->
+
+      <article class="project fade-up">
+
+        <div>
+
+          <div class="project-label">
+            Customer Experience
+          </div>
+
+          <h3>
+            Customer Support & Issue Resolution
+          </h3>
+
+          <p class="project-description">
+            Supported customers in a financial-services environment
+            where accuracy, clear communication, confidentiality,
+            and appropriate escalation were essential.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Intercom</span>
+            <span class="tag">Customer Support</span>
+            <span class="tag">Documentation</span>
+            <span class="tag">Escalation</span>
+          </div>
+
+        </div>
+
+
+        <ul class="project-details">
+
+          <li>
+            <strong>Challenge:</strong>
+            Manage a high-volume support queue while handling
+            account, payment, and card-related customer concerns
+            accurately.
+          </li>
+
+          <li>
+            <strong>Approach:</strong>
+            Prioritized incoming conversations, investigated Tier 1
+            concerns, documented interactions, and escalated sensitive
+            or urgent cases when required.
+          </li>
+
+          <li>
+            <strong>Customer Care:</strong>
+            Supported customers with different levels of urgency,
+            including vulnerable customers requiring careful communication.
+          </li>
+
+          <li>
+            <strong>Outcome:</strong>
+            Helped maintain an organized support workflow while
+            providing accurate and consistent customer assistance.
+          </li>
+
+        </ul>
+
+      </article>
+
+
+      <!-- PROJECT 02 -->
+
+      <article class="project fade-up">
+
+        <div>
+
+          <div class="project-label">
+            Business Operations
+          </div>
+
+          <h3>
+            Service Business Operations & CRM
+          </h3>
+
+          <p class="project-description">
+            Support the day-to-day operations of a growing U.S.
+            service business across customer communication,
+            scheduling, CRM management, billing, field coordination,
+            and administrative workflows.
+          </p>
+
+          <div class="tags">
+            <span class="tag">ServiceCore</span>
+            <span class="tag">CRM</span>
+            <span class="tag">Operations</span>
+            <span class="tag">Customer Support</span>
+          </div>
+
+        </div>
+
+
+        <ul class="project-details">
+
+          <li>
+            <strong>Challenge:</strong>
+            Keep customer, job, technician, payment, and service
+            information organized across recurring daily operations.
+          </li>
+
+          <li>
+            <strong>Approach:</strong>
+            Maintain ServiceCore records, create estimates, support
+            invoicing and payment workflows, coordinate scheduling,
+            and manage customer follow-ups.
+          </li>
+
+          <li>
+            <strong>Coordination:</strong>
+            Work with customers, technicians, vendors, and business
+            leadership to keep service requirements and operational
+            tasks moving.
+          </li>
+
+          <li>
+            <strong>Outcome:</strong>
+            Built and maintained more organized workflows for recurring
+            customer and back-office operations.
+          </li>
+
+        </ul>
+
+      </article>
+
+
+      <!-- PROJECT 03 -->
+
+      <article class="project fade-up">
+
+        <div>
+
+          <div class="project-label">
+            Process Development
+          </div>
+
+          <h3>
+            SOPs, Documentation & Onboarding
+          </h3>
+
+          <p class="project-description">
+            Turned recurring operational responsibilities into
+            documented processes that could be followed,
+            maintained, and used for training.
+          </p>
+
+          <div class="tags">
+            <span class="tag">SOPs</span>
+            <span class="tag">Documentation</span>
+            <span class="tag">Training</span>
+            <span class="tag">Process Improvement</span>
+          </div>
+
+        </div>
+
+
+        <ul class="project-details">
+
+          <li>
+            <strong>Challenge:</strong>
+            Recurring business processes needed clearer documentation
+            and repeatable workflows.
+          </li>
+
+          <li>
+            <strong>Approach:</strong>
+            Created SOPs, checklists, training guides, customer-facing
+            resources, and operational trackers.
+          </li>
+
+          <li>
+            <strong>Onboarding:</strong>
+            Supported the documentation and system processes needed
+            to onboard and coordinate a field team member.
+          </li>
+
+          <li>
+            <strong>Outcome:</strong>
+            Created clearer reference materials for recurring tasks
+            and reduced reliance on undocumented processes.
+          </li>
+
+        </ul>
+
+      </article>
+
+
+      <!-- PROJECT 04 -->
+
+      <article class="project fade-up">
+
+        <div>
+
+          <div class="project-label">
+            CRM & Lead Management
+          </div>
+
+          <h3>
+            Real Estate Virtual Assistance
+          </h3>
+
+          <p class="project-description">
+            Supported a U.S. real estate client with CRM
+            organization, lead information, follow-ups,
+            communication records, and recurring administrative work.
+          </p>
+
+          <div class="tags">
+            <span class="tag">REsimpli</span>
+            <span class="tag">CRM</span>
+            <span class="tag">Lead Management</span>
+            <span class="tag">Administration</span>
+          </div>
+
+        </div>
+
+
+        <ul class="project-details">
+
+          <li>
+            <strong>Challenge:</strong>
+            Keep lead information, communication history, and
+            follow-up activity organized inside an active real estate CRM.
+          </li>
+
+          <li>
+            <strong>Approach:</strong>
+            Maintained REsimpli records, organized lead information,
+            supported follow-ups, and kept database information updated.
+          </li>
+
+          <li>
+            <strong>Additional Support:</strong>
+            Assisted with social media and recurring administrative
+            responsibilities alongside CRM work.
+          </li>
+
+          <li>
+            <strong>Outcome:</strong>
+            Helped maintain organized lead records and consistent
+            administrative support for ongoing real estate operations.
+          </li>
+
+        </ul>
+
+      </article>
+
+
+      <!-- PROJECT 05 -->
+
+      <article class="project fade-up">
+
+        <div>
+
+          <div class="project-label">
+            Digital Business Support
+          </div>
+
+          <h3>
+            Website, Local SEO & Online Presence
+          </h3>
+
+          <p class="project-description">
+            Supported the digital presence of a local service
+            business through website management, local search
+            initiatives, business listings, social content,
+            and outbound research.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Wix</span>
+            <span class="tag">Local SEO</span>
+            <span class="tag">Google Business Profile</span>
+            <span class="tag">Canva</span>
+          </div>
+
+        </div>
+
+
+        <ul class="project-details">
+
+          <li>
+            <strong>Challenge:</strong>
+            Strengthen and maintain the company's online presence
+            across its website, local search profiles, listings,
+            and social platforms.
+          </li>
+
+          <li>
+            <strong>Approach:</strong>
+            Updated Wix content, supported service and location pages,
+            worked on local SEO, maintained business listings, and
+            researched backlink opportunities.
+          </li>
+
+          <li>
+            <strong>Content & Outreach:</strong>
+            Supported social media planning, content coordination,
+            lead research, and outbound campaigns.
+          </li>
+
+          <li>
+            <strong>Outcome:</strong>
+            Built and maintained the foundation for ongoing website,
+            local search, social media, and outreach initiatives.
+          </li>
+
+        </ul>
+
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- PROFESSIONAL EXPERIENCE -->
+
+  <section class="experience" id="experience">
+    <div class="container">
+
+      <div class="section-heading fade-up">
+
+        <span class="eyebrow">
+          Professional Experience
+        </span>
+
+        <h2>
+          A background built across support and operations.
+        </h2>
+
+      </div>
+
+
+      <div class="fade-up">
+
+        <!-- CURRENT ROLE -->
+
+        <div class="experience-item">
+
+          <div>
+
+            <h3>
+              Operations & Customer Support Specialist
+            </h3>
+
+            <div class="experience-date">
+              July 2025 – Present
+            </div>
+
+            <div class="experience-company">
+              US Client · Service & Vacation Rental Operations
+            </div>
+
+          </div>
+
+          <p>
+            Support customer and guest communication, CRM records,
+            scheduling and service workflows, estimates, invoices,
+            payments, technician and vendor coordination,
+            documentation, website management, local SEO,
+            outbound campaigns, and recurring operational tracking.
+          </p>
+
+        </div>
+
+
+        <div class="experience-item">
+
+          <div>
+
+            <h3>
+              Real Estate Virtual Assistant
+            </h3>
+
+            <div class="experience-date">
+              May 2025 – May 2026
+            </div>
+
+            <div class="experience-company">
+              US Real Estate Client
+            </div>
+
+          </div>
+
+          <p>
+            Used REsimpli to organize lead information and
+            communication records while supporting lead
+            follow-ups, database organization, social media,
+            and recurring administrative tasks.
+          </p>
+
+        </div>
+
+
+        <div class="experience-item">
+
+          <div>
+
+            <h3>
+              Executive Assistant & Community Manager
+            </h3>
+
+            <div class="experience-date">
+              June 2025 – September 2025
+            </div>
+
+            <div class="experience-company">
+              Confidential International Fitness Client
+            </div>
+
+          </div>
+
+          <p>
+            Supported coaching clients through member chats
+            while maintaining updates, reminders,
+            announcements, support resources, and recurring
+            executive and administrative tasks.
+          </p>
+
+        </div>
+
+
+        <div class="experience-item">
+
+          <div>
+
+            <h3>
+              Customer Support Representative
+            </h3>
+
+            <div class="experience-date">
+              2024 – 2025
+            </div>
+
+            <div class="experience-company">
+              TaskUs · UK Financial Account
+            </div>
+
+          </div>
+
+          <p>
+            Managed a high-volume customer support queue,
+            including Intercom chats and tickets, payment
+            support, card decline and account inquiries,
+            vulnerable-customer support, documentation,
+            confidentiality, and escalation.
+          </p>
+
+        </div>
+
+
+        <div class="experience-item">
+
+          <div>
+
+            <h3>
+              Social Media Manager & Administrative Assistant
+            </h3>
+
+            <div class="experience-date">
+              2022 – 2024
+            </div>
+
+            <div class="experience-company">
+              Mcars PH · Automotive Dealership
+            </div>
+
+          </div>
+
+          <p>
+            Provided chat and phone support, outbound
+            follow-ups, appointment assistance, Facebook
+            message management, and accurate customer,
+            inquiry, and sales records.
+          </p>
+
+        </div>
+
+
+        <div class="experience-item">
+
+          <div>
+
+            <h3>
+              Social Media Content Moderator
+            </h3>
+
+            <div class="experience-date">
+              2022 · 6-Month Role
+            </div>
+
+            <div class="experience-company">
+              Alorica
+            </div>
+
+          </div>
+
+          <p>
+            Reviewed and moderated video content against
+            platform community guidelines while maintaining
+            consistent attention to accuracy and detail.
+          </p>
+
+        </div>
+
+
+        <div class="experience-item">
+
+          <div>
+
+            <h3>
+              Customer Service Representative
+            </h3>
+
+            <div class="experience-date">
+              2021 · Seasonal Role
+            </div>
+
+            <div class="experience-company">
+              IBEX · E-commerce Support
+            </div>
+
+          </div>
+
+          <p>
+            Handled refunds, returns, order tracking, and
+            general customer inquiries while following
+            established customer support procedures.
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TOOLS -->
+
+  <section id="tools">
+    <div class="container">
+
+      <div class="section-heading fade-up">
+
+        <span class="eyebrow">
+          Tools & Platforms
+        </span>
+
+        <h2>
+          Systems I work with.
+        </h2>
+
+      </div>
+
+
+      <div class="tools-grid fade-up">
+
+        <div class="tool-card">
+
+          <h3>
+            Support & CRM
+          </h3>
+
+          <p>
+            Intercom<br>
+            ServiceCore<br>
+            REsimpli<br>
+            Notion<br>
+            Airbnb<br>
+            Vrbo
+          </p>
+
+        </div>
+
+
+        <div class="tool-card">
+
+          <h3>
+            Communication
+          </h3>
+
+          <p>
+            Gmail<br>
+            Microsoft Outlook<br>
+            Quo<br>
+            Slack<br>
+            Zoom<br>
+            Loom<br>
+            WhatsApp
+          </p>
+
+        </div>
+
+
+        <div class="tool-card">
+
+          <h3>
+            Marketing & Web
+          </h3>
+
+          <p>
+            Wix<br>
+            Meta Business Suite<br>
+            Canva<br>
+            Google Business Profile<br>
+            Buffer
+          </p>
+
+        </div>
+
+
+        <div class="tool-card">
+
+          <h3>
+            AI & Productivity
+          </h3>
+
+          <p>
+            Google Workspace<br>
+            Microsoft Office<br>
+            ChatGPT<br>
+            Claude<br>
+            Gemini<br>
+            Grok<br>
+            ElevenLabs<br>
+            Deepseek
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+    <div class="container about-grid fade-up">
+
+      <div>
+
+        <span class="eyebrow">
+          About Me
+        </span>
+
+        <h2>
+          A little about how I work.
+        </h2>
+
+      </div>
+
+
+      <div class="about-copy">
+
+        <p>
+          I'm a customer support and business operations
+          professional with more than four years of experience
+          supporting customers, remote teams, and growing businesses.
+        </p>
+
+        <p>
+          My experience has developed beyond one specific role.
+          I've worked across customer service, CRM management,
+          administrative and executive support, documentation,
+          social media, websites, SEO, and daily business operations.
+        </p>
+
+        <p>
+          One of my strengths is being able to understand both
+          sides of a business: the customer-facing experience
+          and the systems behind it.
+        </p>
+
+        <p>
+          I value clear communication, accurate work,
+          organized processes, and reliable follow-through.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section class="contact" id="contact">
+    <div class="container fade-up">
+
       <span class="eyebrow">
-        Customer Support × Business Operations
+        Let's Connect
       </span>
 
-      <h1>
-        Supporting customers.<br>
-        Keeping <span>operations moving.</span>
-      </h1>
-
-      <p class="hero-description">
-        I'm Alyssa, a Customer Support & Business Operations Specialist
-        with 4+ years of experience supporting international customers,
-        remote teams, and growing businesses. My experience combines
-        customer service, CRM management, administrative support,
-        documentation, workflow coordination, and digital business support.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#work" class="btn btn-dark">View My Work</a>
-        <a href="resume.pdf" target="_blank" class="btn btn-light">View Resume</a>
-      </div>
-    </div>
-
-    <aside class="hero-side">
-      <div class="hero-side-title">Core Strengths</div>
-
-      <ul>
-        <li>Customer Experience</li>
-        <li>Business Operations</li>
-        <li>CRM & Workflows</li>
-        <li>Digital Support</li>
-      </ul>
-    </aside>
-
-  </div>
-</header>
-
-
-<!-- INTRO -->
-
-<section class="intro">
-  <div class="container intro-grid fade-up">
-
-    <div>
-      <span class="eyebrow">What I Bring</span>
-    </div>
-
-    <p class="intro-copy">
-      I help businesses create a better customer experience
-      while keeping the systems, communication, and day-to-day
-      work behind it organized.
-    </p>
-
-  </div>
-</section>
-
-
-<!-- EXPERTISE -->
-
-<section id="expertise">
-  <div class="container">
-
-    <div class="section-heading fade-up">
-      <span class="eyebrow">Expertise</span>
-
-      <h2>How I can help.</h2>
-
-      <p>
-        My experience combines customer-facing support with the
-        operational systems, documentation, and digital work that
-        keep a business organized behind the scenes.
-      </p>
-    </div>
-
-    <div class="services-grid fade-up">
-
-      <div class="service">
-        <div class="service-number">01</div>
-
-        <h3>Customer Support & Experience</h3>
-
-        <p>
-          Chat, email and phone support, ticket management,
-          customer inquiries, account and payment support,
-          issue resolution, escalation, and follow-up.
-        </p>
-      </div>
-
-      <div class="service">
-        <div class="service-number">02</div>
-
-        <h3>Business Operations</h3>
-
-        <p>
-          Workflow coordination, scheduling support, service
-          coordination, vendor communication, reporting,
-          process tracking, and administrative support.
-        </p>
-      </div>
-
-      <div class="service">
-        <div class="service-number">03</div>
-
-        <h3>CRM & Process Management</h3>
-
-        <p>
-          CRM management, lead tracking, record accuracy,
-          follow-up workflows, SOPs, training guides,
-          checklists, documentation, and process improvement.
-        </p>
-      </div>
-
-      <div class="service">
-        <div class="service-number">04</div>
-
-        <h3>Digital Business Support</h3>
-
-        <p>
-          Website management, Wix, local SEO, business listings,
-          social media, content support, Meta Business Suite,
-          Canva, research, and outbound campaigns.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- SELECTED WORK -->
-
-<section class="work" id="work">
-  <div class="container">
-
-    <div class="section-heading fade-up">
-      <span class="eyebrow">Selected Work</span>
-
-      <h2>Experience in action.</h2>
-
-      <p>
-        Examples of how I've supported customers, teams,
-        systems, and business operations.
-      </p>
-    </div>
-
-
-    <article class="project fade-up">
-
-      <div>
-        <div class="project-label">Case Study 01</div>
-
-        <h3>Customer Support & Issue Resolution</h3>
-
-        <p class="project-description">
-          Supported customers across chat, email, and phone
-          while handling account questions, payments, service
-          concerns, booking questions, and issue resolution.
-        </p>
-
-        <div class="tags">
-          <span class="tag">Customer Support</span>
-          <span class="tag">Intercom</span>
-          <span class="tag">Email</span>
-          <span class="tag">Issue Resolution</span>
-        </div>
-      </div>
-
-      <ul class="project-details">
-        <li>Managed high-volume customer inquiries</li>
-        <li>Prioritized support queues and customer concerns</li>
-        <li>Resolved Tier 1 issues</li>
-        <li>Supported account and payment inquiries</li>
-        <li>Maintained accurate interaction records</li>
-        <li>Escalated sensitive or urgent concerns</li>
-        <li>Followed issues through resolution</li>
-      </ul>
-
-    </article>
-
-
-    <article class="project fade-up">
-
-      <div>
-        <div class="project-label">Case Study 02</div>
-
-        <h3>CRM & Customer Operations</h3>
-
-        <p class="project-description">
-          Managed customer, lead, service, and operational
-          information across CRM platforms while supporting
-          follow-ups and daily workflows.
-        </p>
-
-        <div class="tags">
-          <span class="tag">CRM</span>
-          <span class="tag">ServiceCore</span>
-          <span class="tag">REsimpli</span>
-          <span class="tag">Operations</span>
-        </div>
-      </div>
-
-      <ul class="project-details">
-        <li>Maintained accurate CRM records</li>
-        <li>Managed customer and lead information</li>
-        <li>Supported follow-up workflows</li>
-        <li>Maintained job and service records</li>
-        <li>Supported estimates, invoices, and payments</li>
-        <li>Created operational trackers and reports</li>
-      </ul>
-
-    </article>
-
-
-    <article class="project fade-up">
-
-      <div>
-        <div class="project-label">Case Study 03</div>
-
-        <h3>SOPs & Process Documentation</h3>
-
-        <p class="project-description">
-          Created practical documentation and systems that
-          made recurring business processes easier to
-          understand, follow, and manage.
-        </p>
-
-        <div class="tags">
-          <span class="tag">SOPs</span>
-          <span class="tag">Documentation</span>
-          <span class="tag">Training</span>
-          <span class="tag">Process Improvement</span>
-        </div>
-      </div>
-
-      <ul class="project-details">
-        <li>Created SOPs and training guides</li>
-        <li>Developed operational checklists</li>
-        <li>Prepared customer-facing resources</li>
-        <li>Maintained process trackers</li>
-        <li>Supported employee onboarding</li>
-        <li>Used AI tools to improve documentation efficiency</li>
-      </ul>
-
-    </article>
-
-
-    <article class="project fade-up">
-
-      <div>
-        <div class="project-label">Case Study 04</div>
-
-        <h3>Remote & Executive Support</h3>
-
-        <p class="project-description">
-          Supported remote businesses through customer
-          communication, administration, research,
-          coordination, documentation, and recurring
-          operational tasks.
-        </p>
-
-        <div class="tags">
-          <span class="tag">Executive Support</span>
-          <span class="tag">Administration</span>
-          <span class="tag">Research</span>
-          <span class="tag">Coordination</span>
-        </div>
-      </div>
-
-      <ul class="project-details">
-        <li>Managed customer and team communication</li>
-        <li>Supported recurring administrative tasks</li>
-        <li>Conducted business research</li>
-        <li>Supported scheduling and coordination</li>
-        <li>Organized databases and documentation</li>
-        <li>Coordinated with vendors and team members</li>
-      </ul>
-
-    </article>
-
-
-    <article class="project fade-up">
-
-      <div>
-        <div class="project-label">Case Study 05</div>
-
-        <h3>Digital Marketing & Web Support</h3>
-
-        <p class="project-description">
-          Supported businesses with their online presence
-          through website management, local SEO, social
-          media, business listings, and outbound activities.
-        </p>
-
-        <div class="tags">
-          <span class="tag">Wix</span>
-          <span class="tag">SEO</span>
-          <span class="tag">Social Media</span>
-          <span class="tag">Canva</span>
-          <span class="tag">Meta</span>
-        </div>
-      </div>
-
-      <ul class="project-details">
-        <li>Managed and updated Wix website content</li>
-        <li>Supported local SEO initiatives</li>
-        <li>Maintained business listings</li>
-        <li>Supported social media and content planning</li>
-        <li>Conducted lead and opportunity research</li>
-        <li>Supported outbound marketing campaigns</li>
-      </ul>
-
-    </article>
-
-  </div>
-</section>
-
-
-<!-- PROFESSIONAL EXPERIENCE -->
-
-<section class="experience" id="experience">
-  <div class="container">
-
-    <div class="section-heading fade-up">
-      <span class="eyebrow">Professional Experience</span>
-
       <h2>
-        A background built across support and operations.
+        Let's work together.
       </h2>
-    </div>
-
-
-    <div class="fade-up">
-
-      <!-- CURRENT ROLE -->
-
-      <div class="experience-item">
-
-        <div>
-          <h3>Operations & Customer Support Specialist</h3>
-
-          <div class="experience-date">
-            July 2025 – Present
-          </div>
-
-          <div class="experience-company">
-            US Client · Service & Vacation Rental Operations
-          </div>
-        </div>
-
-        <p>
-          Support customer and guest communication, CRM records,
-          scheduling and service workflows, estimates, invoices,
-          payments, technician and vendor coordination,
-          documentation, website management, local SEO,
-          outbound campaigns, and recurring operational tracking.
-        </p>
-
-      </div>
-
-
-      <div class="experience-item">
-
-        <div>
-          <h3>Real Estate Virtual Assistant</h3>
-
-          <div class="experience-date">
-            May 2025 – May 2026
-          </div>
-
-          <div class="experience-company">
-            US Real Estate Client
-          </div>
-        </div>
-
-        <p>
-          Used REsimpli to organize lead information and
-          communication records while supporting lead
-          follow-ups, database organization, social media,
-          and recurring administrative tasks.
-        </p>
-
-      </div>
-
-
-      <div class="experience-item">
-
-        <div>
-          <h3>Executive Assistant & Community Manager</h3>
-
-          <div class="experience-date">
-            June 2025 – September 2025
-          </div>
-
-          <div class="experience-company">
-            Confidential International Fitness Client
-          </div>
-        </div>
-
-        <p>
-          Supported coaching clients through member chats
-          while maintaining updates, reminders,
-          announcements, support resources, and recurring
-          executive and administrative tasks.
-        </p>
-
-      </div>
-
-
-      <div class="experience-item">
-
-        <div>
-          <h3>Customer Support Representative</h3>
-
-          <div class="experience-date">
-            2024 – 2025
-          </div>
-
-          <div class="experience-company">
-            TaskUs · UK Financial Account
-          </div>
-        </div>
-
-        <p>
-          Managed a high-volume customer support queue,
-          including Intercom chats and tickets, payment
-          support, card decline and account inquiries,
-          vulnerable-customer support, documentation,
-          confidentiality, and escalation.
-        </p>
-
-      </div>
-
-
-      <div class="experience-item">
-
-        <div>
-          <h3>Social Media Manager & Administrative Assistant</h3>
-
-          <div class="experience-date">
-            2022 – 2024
-          </div>
-
-          <div class="experience-company">
-            Mcars PH · Automotive Dealership
-          </div>
-        </div>
-
-        <p>
-          Provided chat and phone support, outbound
-          follow-ups, appointment assistance, Facebook
-          message management, and accurate customer,
-          inquiry, and sales records.
-        </p>
-
-      </div>
-
-
-      <div class="experience-item">
-
-        <div>
-          <h3>Social Media Content Moderator</h3>
-
-          <div class="experience-date">
-            2022 · 6-Month Role
-          </div>
-
-          <div class="experience-company">
-            Alorica
-          </div>
-        </div>
-
-        <p>
-          Reviewed and moderated video content against
-          platform community guidelines while maintaining
-          consistent attention to accuracy and detail.
-        </p>
-
-      </div>
-
-
-      <div class="experience-item">
-
-        <div>
-          <h3>Customer Service Representative</h3>
-
-          <div class="experience-date">
-            2021 · Seasonal Role
-          </div>
-
-          <div class="experience-company">
-            IBEX · E-commerce Support
-          </div>
-        </div>
-
-        <p>
-          Handled refunds, returns, order tracking, and
-          general customer inquiries while following
-          established customer support procedures.
-        </p>
-
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- TOOLS -->
-
-<section id="tools">
-  <div class="container">
-
-    <div class="section-heading fade-up">
-      <span class="eyebrow">Tools & Platforms</span>
-
-      <h2>Systems I work with.</h2>
-    </div>
-
-
-    <div class="tools-grid fade-up">
-
-      <div class="tool-card">
-        <h3>Support & CRM</h3>
-
-        <p>
-          Intercom<br>
-          ServiceCore<br>
-          REsimpli<br>
-          Notion<br>
-          Airbnb<br>
-          Vrbo
-        </p>
-      </div>
-
-
-      <div class="tool-card">
-        <h3>Communication</h3>
-
-        <p>
-          Gmail<br>
-          Microsoft Outlook<br>
-          Quo<br>
-          Slack<br>
-          Zoom<br>
-          Loom<br>
-          WhatsApp
-        </p>
-      </div>
-
-
-      <div class="tool-card">
-        <h3>Marketing & Web</h3>
-
-        <p>
-          Wix<br>
-          Meta Business Suite<br>
-          Canva<br>
-          Google Business Profile<br>
-          Buffer
-        </p>
-      </div>
-
-
-      <div class="tool-card">
-        <h3>AI & Productivity</h3>
-
-        <p>
-          Google Workspace<br>
-          Microsoft Office<br>
-          ChatGPT<br>
-          Claude<br>
-          Gemini<br>
-          Grok<br>
-          ElevenLabs<br>
-          Deepseek
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ABOUT -->
-
-<section class="about" id="about">
-  <div class="container about-grid fade-up">
-
-    <div>
-      <span class="eyebrow">About Me</span>
-
-      <h2>
-        A little about how I work.
-      </h2>
-    </div>
-
-
-    <div class="about-copy">
 
       <p>
-        I'm a customer support and business operations
-        professional with more than four years of experience
-        supporting customers, remote teams, and growing businesses.
+        I'm open to long-term remote opportunities in customer
+        support, business operations, CRM, executive or
+        administrative support, and digital business support.
       </p>
 
-      <p>
-        My experience has developed beyond one specific role.
-        I've worked across customer service, CRM management,
-        administrative and executive support, documentation,
-        social media, websites, SEO, and daily business operations.
-      </p>
 
-      <p>
-        One of my strengths is being able to understand both
-        sides of a business: the customer-facing experience
-        and the systems behind it.
-      </p>
+      <div class="contact-buttons">
 
-      <p>
-        I value clear communication, accurate work,
-        organized processes, and reliable follow-through.
-      </p>
+        <a
+          href="mailto:alyssaestrella0@gmail.com"
+          class="btn btn-primary"
+        >
+          Email Me
+        </a>
+
+        <a
+          href="resume.pdf"
+          target="_blank"
+          class="btn btn-secondary"
+        >
+          View Resume
+        </a>
+
+      </div>
 
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- CONTACT -->
+  <!-- FOOTER -->
 
-<section class="contact" id="contact">
-  <div class="container fade-up">
+  <footer>
+    <div class="container footer-inner">
 
-    <span class="eyebrow">Let's Connect</span>
+      <span>
+        © <span id="year"></span> Alyssa Mae M. Estrella
+      </span>
 
-    <h2>Let's work together.</h2>
-
-    <p>
-      I'm open to long-term remote opportunities in customer
-      support, business operations, CRM, executive or
-      administrative support, and digital business support.
-    </p>
-
-
-    <div class="contact-buttons">
-
-      <a
-        href="mailto:alyssaestrella0@gmail.com"
-        class="btn btn-primary"
-      >
-        Email Me
-      </a>
-
-      <a
-        href="resume.pdf"
-        target="_blank"
-        class="btn btn-secondary"
-      >
-        View Resume
-      </a>
+      <span>
+        Customer Support & Business Operations Specialist
+      </span>
 
     </div>
-
-  </div>
-</section>
+  </footer>
 
 
-<!-- FOOTER -->
+  <script>
 
-<footer>
-  <div class="container footer-inner">
-
-    <span>
-      © <span id="year"></span> Alyssa Mae M. Estrella
-    </span>
-
-    <span>
-      Customer Support & Business Operations Specialist
-    </span>
-
-  </div>
-</footer>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
 
 
-<script>
+    const menuButton =
+      document.getElementById("menuButton");
 
-  document.getElementById("year").textContent =
-    new Date().getFullYear();
-
-
-  const menuButton =
-    document.getElementById("menuButton");
-
-  const navLinks =
-    document.getElementById("navLinks");
+    const navLinks =
+      document.getElementById("navLinks");
 
 
-  menuButton.addEventListener("click", function () {
+    menuButton.addEventListener("click", function () {
 
-    const open =
-      navLinks.classList.toggle("open");
+      const open =
+        navLinks.classList.toggle("open");
 
-    menuButton.textContent =
-      open ? "CLOSE" : "MENU";
+      menuButton.textContent =
+        open ? "CLOSE" : "MENU";
 
-    menuButton.setAttribute(
-      "aria-expanded",
-      open
-    );
-
-  });
-
-
-  document
-    .querySelectorAll(".nav-links a")
-    .forEach(function(link) {
-
-      link.addEventListener("click", function() {
-
-        navLinks.classList.remove("open");
-
-        menuButton.textContent = "MENU";
-
-        menuButton.setAttribute(
-          "aria-expanded",
-          "false"
-        );
-
-      });
+      menuButton.setAttribute(
+        "aria-expanded",
+        open
+      );
 
     });
 
 
-  const reduceMotion =
-    window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-
-  if (reduceMotion) {
-
     document
-      .querySelectorAll(".fade-up")
-      .forEach(function(element) {
+      .querySelectorAll(".nav-links a")
+      .forEach(function(link) {
 
-        element.classList.add("visible");
+        link.addEventListener("click", function() {
+
+          navLinks.classList.remove("open");
+
+          menuButton.textContent = "MENU";
+
+          menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        });
 
       });
 
-  } else {
 
-    const observer =
-      new IntersectionObserver(
-
-        function(entries) {
-
-          entries.forEach(function(entry) {
-
-            if (entry.isIntersecting) {
-
-              entry.target.classList.add(
-                "visible"
-              );
-
-              observer.unobserve(
-                entry.target
-              );
-
-            }
-
-          });
-
-        },
-
-        {
-          threshold: .1
-        }
-
-      );
+    const reduceMotion =
+      window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
 
 
-    document
-      .querySelectorAll(".fade-up")
-      .forEach(function(element) {
+    if (reduceMotion) {
 
-        observer.observe(element);
+      document
+        .querySelectorAll(".fade-up")
+        .forEach(function(element) {
 
-      });
+          element.classList.add("visible");
 
-  }
+        });
 
-</script>
+    } else {
+
+      const observer =
+        new IntersectionObserver(
+
+          function(entries) {
+
+            entries.forEach(function(entry) {
+
+              if (entry.isIntersecting) {
+
+                entry.target.classList.add(
+                  "visible"
+                );
+
+                observer.unobserve(
+                  entry.target
+                );
+
+              }
+
+            });
+
+          },
+
+          {
+            threshold: .1
+          }
+
+        );
+
+
+      document
+        .querySelectorAll(".fade-up")
+        .forEach(function(element) {
+
+          observer.observe(element);
+
+        });
+
+    }
+
+  </script>
 
 </body>
 </html>
