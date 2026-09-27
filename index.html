@@ -1,61 +1,2589 @@
-<!-- ABOUT -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<section class="about" id="about">
+  <title>Alyssa Estrella | Customer Support & Business Operations</title>
 
-  <div class="container about-grid fade-up">
+  <meta
+    name="description"
+    content="Portfolio of Alyssa Mae M. Estrella, a Customer Support & Business Operations Specialist experienced in customer experience, CRM, remote operations, administrative support, documentation, and digital business support."
+  >
 
-    <div>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-      <span class="eyebrow">
-        About Me
-      </span>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
-      <h2>
-        A little about how I work.
-      </h2>
+  <style>
 
-      <div class="about-photo-wrap">
+    :root {
+      --cream: #F7F4EF;
+      --cream-dark: #E0D9D3;
+      --white: #FFFEFB;
+      --black: #171614;
+      --charcoal: #292622;
+      --brown: #524639;
+      --taupe: #918574;
+      --stone: #9F958A;
+      --gray: #706A63;
+      --border: #D4CCC3;
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --sans: "Inter", Arial, sans-serif;
+    }
 
-        <img
-          src="images/ProfessionalPhoto.png"
-          alt="Professional photo of Alyssa Estrella"
-          class="about-photo"
-          loading="lazy"
-        >
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--black);
+      font-family: var(--sans);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: auto;
+    }
+
+    section {
+      padding: 100px 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--serif);
+    }
+
+    h2 {
+      margin-bottom: 22px;
+      font-size: clamp(2.8rem, 5vw, 4.8rem);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -.035em;
+    }
+
+    p {
+      color: var(--gray);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 16px;
+      color: var(--taupe);
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 65px;
+    }
+
+    .section-heading p {
+      max-width: 650px;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================== */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(247, 244, 239, .96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      font-family: var(--serif);
+      font-size: 1.9rem;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      list-style: none;
+      font-size: .8rem;
+      font-weight: 600;
+    }
+
+    .nav-links a {
+      transition: opacity .2s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: .5;
+    }
+
+    .menu-button {
+      display: none;
+      background: transparent;
+      border: 0;
+      color: var(--black);
+      font-family: var(--sans);
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* =========================
+       BUTTONS
+    ========================== */
+
+    .btn {
+      min-height: 48px;
+      padding: 0 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--black);
+      font-size: .78rem;
+      font-weight: 600;
+      transition: all .25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-dark {
+      background: var(--black);
+      color: var(--cream);
+    }
+
+    .btn-dark:hover {
+      background: var(--brown);
+      border-color: var(--brown);
+    }
+
+    .btn-light:hover {
+      background: var(--black);
+      color: var(--cream);
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: auto;
+      padding: 80px 0 90px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(260px, .45fr);
+      gap: 75px;
+      align-items: center;
+    }
+
+    .hero-main {
+      min-width: 0;
+    }
+
+    .hero h1 {
+      max-width: 780px;
+      margin: 0 0 26px;
+      font-size: 66px;
+      font-weight: 500;
+      line-height: .93;
+      letter-spacing: -.045em;
+    }
+
+    .hero h1 span {
+      color: var(--brown);
+    }
+
+    .hero-description {
+      max-width: 690px;
+      margin-bottom: 28px;
+      font-size: .95rem;
+      line-height: 1.8;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-side {
+      padding-left: 38px;
+      border-left: 1px solid var(--border);
+    }
+
+    .hero-side-title {
+      margin-bottom: 10px;
+      color: var(--taupe);
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .hero-side ul {
+      list-style: none;
+    }
+
+    .hero-side li {
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border);
+      font-family: var(--serif);
+      font-size: 1.25rem;
+    }
+
+    /* =========================
+       INTRO
+    ========================== */
+
+    .intro {
+      background: var(--black);
+      color: var(--cream);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: .45fr 1.55fr;
+      gap: 80px;
+    }
+
+    .intro .eyebrow {
+      color: var(--stone);
+    }
+
+    .intro-copy {
+      color: #E8E1D9;
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.25;
+    }
+
+    /* =========================
+       EXPERTISE
+    ========================== */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid var(--border);
+    }
+
+    .service {
+      padding: 45px 45px 45px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .service:nth-child(even) {
+      padding-left: 45px;
+      border-left: 1px solid var(--border);
+    }
+
+    .service-number {
+      margin-bottom: 24px;
+      color: var(--taupe);
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+    }
+
+    .service h3 {
+      margin-bottom: 14px;
+      font-size: 1.85rem;
+      font-weight: 600;
+    }
+
+    /* =========================
+       SELECTED WORK
+    ========================== */
+
+    .work {
+      background: var(--white);
+    }
+
+    .case-study {
+      padding: 80px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .case-study:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .case-study:nth-of-type(even) .case-visual {
+      order: 2;
+    }
+
+    .case-study:nth-of-type(even) .case-content {
+      order: 1;
+    }
+
+    .project-label {
+      margin-bottom: 13px;
+      color: var(--taupe);
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .case-content h3 {
+      margin-bottom: 17px;
+      font-size: clamp(2.1rem, 4vw, 3rem);
+      font-weight: 500;
+      line-height: 1.05;
+    }
+
+    .case-content > p {
+      margin-bottom: 25px;
+    }
+
+    .case-points {
+      margin: 27px 0;
+      list-style: none;
+    }
+
+    .case-points li {
+      position: relative;
+      padding: 11px 0 11px 23px;
+      color: var(--gray);
+      border-bottom: 1px solid #EAE4DD;
+      font-size: .88rem;
+    }
+
+    .case-points li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--brown);
+    }
+
+    .case-points strong {
+      color: var(--black);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      padding: 7px 11px;
+      border: 1px solid var(--border);
+      color: var(--gray);
+      font-size: .68rem;
+    }
+
+    /* =========================
+       REAL PORTFOLIO SCREENSHOTS
+    ========================== */
+
+    .case-visual {
+      min-width: 0;
+    }
+
+    .portfolio-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .portfolio-gallery.single {
+      grid-template-columns: 1fr;
+    }
+
+    .portfolio-gallery.four {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .portfolio-shot {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      min-height: 185px;
+      padding: 0;
+      background: #E8E1D9;
+      border: 1px solid #CEC4BA;
+      cursor: zoom-in;
+      box-shadow: 0 16px 38px rgba(23, 22, 20, .08);
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+    }
+
+    .portfolio-shot:hover {
+      transform: translateY(-3px);
+      border-color: var(--taupe);
+      box-shadow: 0 22px 45px rgba(23, 22, 20, .13);
+    }
+
+    .portfolio-shot:focus-visible {
+      outline: 2px solid var(--brown);
+      outline-offset: 3px;
+    }
+
+    .portfolio-shot img {
+      width: 100%;
+      height: 100%;
+      min-height: 185px;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform .35s ease;
+    }
+
+    .portfolio-shot:hover img {
+      transform: scale(1.015);
+    }
+
+    .portfolio-gallery.single .portfolio-shot img {
+      min-height: 360px;
+      aspect-ratio: 16 / 10;
+      object-fit: contain;
+      background: #EEE8E1;
+    }
+
+    .portfolio-shot.tall img {
+      object-fit: contain;
+      background: #EEE8E1;
+    }
+
+    .shot-caption {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      max-width: calc(100% - 20px);
+      padding: 7px 10px;
+      background: rgba(23, 22, 20, .88);
+      color: #F7F4EF;
+      font-size: .61rem;
+      font-weight: 600;
+      letter-spacing: .02em;
+      text-align: left;
+    }
+
+    .gallery-note {
+      margin-top: 12px;
+      color: var(--stone);
+      font-size: .68rem;
+    }
+
+    /* =========================
+       IMAGE LIGHTBOX
+    ========================== */
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 3000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      background: rgba(15, 14, 13, .94);
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox-inner {
+      position: relative;
+      width: min(1450px, 96vw);
+      max-height: 92vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-image {
+      max-width: 100%;
+      max-height: 88vh;
+      object-fit: contain;
+      box-shadow: 0 20px 80px rgba(0, 0, 0, .35);
+    }
+
+    .lightbox-close {
+      position: fixed;
+      top: 22px;
+      right: 26px;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--cream);
+      color: var(--black);
+      border: 0;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    .lightbox-caption {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      max-width: 80%;
+      padding: 8px 14px;
+      background: rgba(23, 22, 20, .8);
+      color: #F7F4EF;
+      font-size: .72rem;
+      text-align: center;
+    }
+
+    /* =========================
+       EXPERIENCE
+    ========================== */
+
+    .experience {
+      background: var(--cream-dark);
+    }
+
+    .experience-item {
+      display: grid;
+      grid-template-columns: .78fr 1.22fr;
+      gap: 65px;
+      padding: 38px 0;
+      border-top: 1px solid #C9BFB5;
+    }
+
+    .experience-item:last-child {
+      border-bottom: 1px solid #C9BFB5;
+    }
+
+    .experience-item h3 {
+      margin-bottom: 6px;
+      font-size: 1.65rem;
+      font-weight: 600;
+      line-height: 1.15;
+    }
+
+    .experience-date {
+      margin-bottom: 5px;
+      color: var(--taupe);
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    .experience-company {
+      color: var(--brown);
+      font-size: .84rem;
+      font-weight: 600;
+    }
+
+    /* =========================
+       TOOLS
+    ========================== */
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .tool-card {
+      padding: 30px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      transition: transform .25s ease;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .tool-card h3 {
+      margin-bottom: 17px;
+      font-size: 1.45rem;
+      font-weight: 600;
+    }
+
+    .tool-card p {
+      font-size: .84rem;
+      line-height: 2;
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about {
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .72fr 1.28fr;
+      gap: 90px;
+    }
+
+    .about-copy p {
+      margin-bottom: 20px;
+      font-size: 1.02rem;
+    }
+    .about-photo-wrap {
+  margin-top: 32px;
+  max-width: 340px;
+}
+
+.about-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 50px rgba(23, 22, 20, .08);
+}
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact {
+      background: var(--brown);
+      color: var(--cream);
+      text-align: center;
+    }
+
+    .contact .eyebrow {
+      color: #C8BCAF;
+    }
+
+    .contact h2 {
+      max-width: 830px;
+      margin: 0 auto 24px;
+    }
+
+    .contact p {
+      max-width: 610px;
+      margin: 0 auto 34px;
+      color: #DED6CD;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .contact .btn {
+      border-color: var(--cream);
+    }
+
+    .contact .btn-primary {
+      background: var(--cream);
+      color: var(--black);
+    }
+
+    .contact .btn-primary:hover {
+      background: var(--black);
+      border-color: var(--black);
+      color: var(--cream);
+    }
+
+    .contact .btn-secondary {
+      color: var(--cream);
+    }
+
+    .contact .btn-secondary:hover {
+      background: var(--cream);
+      color: var(--black);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      padding: 28px 0;
+      background: var(--black);
+      color: #A39B92;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: .72rem;
+    }
+
+    /* =========================
+       ANIMATION
+    ========================== */
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================
+       LAPTOP
+    ========================== */
+
+    @media (max-width: 1200px) {
+
+      .hero h1 {
+        font-size: 60px;
+      }
+
+      .hero-grid {
+        gap: 50px;
+      }
+
+      .case-grid {
+        gap: 50px;
+      }
+
+    }
+
+    /* =========================
+       TABLET
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      section {
+        padding: 80px 0;
+      }
+
+      .desktop-contact {
+        display: none;
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 76px;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 20px 5% 30px;
+        background: var(--cream);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links li,
+      .nav-links a {
+        width: 100%;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 13px 0;
+        border-bottom: 1px solid var(--border);
+        font-family: var(--serif);
+        font-size: 1.35rem;
+      }
+
+      .hero {
+        padding: 65px 0 75px;
+      }
+
+      .hero-grid,
+      .intro-grid,
+      .case-grid,
+      .experience-item,
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+      }
+
+      .hero h1 {
+        max-width: 680px;
+        font-size: 58px;
+      }
+
+      .hero-side {
+        padding: 28px 0 0;
+        border-top: 1px solid var(--border);
+        border-left: 0;
+      }
+
+      .case-study:nth-of-type(even) .case-visual,
+      .case-study:nth-of-type(even) .case-content {
+        order: initial;
+      }
+
+      .case-visual {
+        order: 1 !important;
+      }
+
+      .case-content {
+        order: 2 !important;
+      }
+
+      .portfolio-shot img {
+        min-height: 220px;
+      }
+
+      .portfolio-gallery.single .portfolio-shot img {
+        min-height: 300px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service,
+      .service:nth-child(even) {
+        padding: 36px 0;
+        border-left: 0;
+      }
+
+      .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 560px) {
+
+      .container {
+        width: 88%;
+      }
+
+      .hero {
+        padding: 50px 0 60px;
+      }
+
+      .hero h1 {
+        font-size: 46px;
+        line-height: .95;
+      }
+
+      .hero-description {
+        font-size: .9rem;
+      }
+
+      .hero-buttons,
+      .contact-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .portfolio-gallery,
+      .portfolio-gallery.four {
+        grid-template-columns: 1fr;
+      }
+
+      .portfolio-shot,
+      .portfolio-shot img,
+      .portfolio-gallery.single .portfolio-shot img {
+        min-height: 210px;
+      }
+
+      .lightbox {
+        padding: 15px;
+      }
+
+      .lightbox-close {
+        top: 12px;
+        right: 12px;
+      }
+
+      .lightbox-caption {
+        max-width: 90%;
+        width: max-content;
+      }
+
+      .tools-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      .fade-up {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+
+      .portfolio-shot,
+      .portfolio-shot img {
+        transition: none;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <div class="container nav-inner">
+
+      <a href="#home" class="logo">Hello.</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="btn btn-dark desktop-contact">
+        Let's Connect
+      </a>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        MENU
+      </button>
+
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header class="hero" id="home">
+
+    <div class="container hero-grid">
+
+      <div class="hero-main">
+
+        <span class="eyebrow">
+          Customer Support × Business Operations
+        </span>
+
+        <h1>
+          Supporting customers.<br>
+          Keeping operations <span>moving.</span>
+        </h1>
+
+        <p class="hero-description">
+          I'm Alyssa, a Customer Support & Business Operations Specialist
+          with 4+ years of experience supporting international customers,
+          remote teams, and growing businesses. My experience combines
+          customer service, CRM management, administrative support,
+          documentation, workflow coordination, and digital business support.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#work" class="btn btn-dark">
+            View My Work
+          </a>
+
+          <a href="resume.pdf" target="_blank" class="btn btn-light">
+            View Resume
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <aside class="hero-side">
+
+        <div class="hero-side-title">
+          Core Strengths
+        </div>
+
+        <ul>
+          <li>Customer Experience</li>
+          <li>Business Operations</li>
+          <li>CRM & Workflows</li>
+          <li>Digital Support</li>
+        </ul>
+
+      </aside>
+
+    </div>
+
+  </header>
+
+
+  <!-- INTRO -->
+
+  <section class="intro">
+
+    <div class="container intro-grid fade-up">
+
+      <div>
+        <span class="eyebrow">
+          What I Bring
+        </span>
+      </div>
+
+      <p class="intro-copy">
+        I help businesses create a better customer experience
+        while keeping the systems, communication, and day-to-day
+        work behind it organized.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- EXPERTISE -->
+
+  <section id="expertise">
+
+    <div class="container">
+
+      <div class="section-heading fade-up">
+
+        <span class="eyebrow">
+          Expertise
+        </span>
+
+        <h2>
+          How I can help.
+        </h2>
+
+        <p>
+          My experience combines customer-facing support with the
+          operational systems, documentation, and digital work that
+          keep a business organized behind the scenes.
+        </p>
+
+      </div>
+
+
+      <div class="services-grid fade-up">
+
+        <div class="service">
+
+          <div class="service-number">01</div>
+
+          <h3>Customer Support & Experience</h3>
+
+          <p>
+            Chat, email and phone support, ticket management,
+            customer inquiries, account and payment support,
+            issue resolution, escalation, and follow-up.
+          </p>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-number">02</div>
+
+          <h3>Business Operations</h3>
+
+          <p>
+            Workflow coordination, scheduling support, service
+            coordination, vendor communication, reporting,
+            process tracking, and administrative support.
+          </p>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-number">03</div>
+
+          <h3>CRM & Process Management</h3>
+
+          <p>
+            CRM management, lead tracking, record accuracy,
+            follow-up workflows, SOPs, training guides,
+            checklists, documentation, and process improvement.
+          </p>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-number">04</div>
+
+          <h3>Digital Business Support</h3>
+
+          <p>
+            Website management, Wix, local SEO, business listings,
+            social media, content support, Meta Business Suite,
+            Canva, research, and outbound campaigns.
+          </p>
+
+        </div>
 
       </div>
 
     </div>
 
+  </section>
 
-    <div class="about-copy">
 
-      <p>
-        I'm a customer support and business operations
-        professional with more than four years of experience
-        supporting customers, remote teams, and growing businesses.
-      </p>
+  <!-- SELECTED WORK -->
 
-      <p>
-        My experience has developed beyond one specific role.
-        I've worked across customer service, CRM management,
-        administrative and executive support, documentation,
-        social media, websites, SEO, and daily business operations.
-      </p>
+  <section class="work" id="work">
 
-      <p>
-        One of my strengths is being able to understand both
-        sides of a business: the customer-facing experience
-        and the systems behind it.
-      </p>
+    <div class="container">
 
-      <p>
-        I value clear communication, accurate work,
-        organized processes, and reliable follow-through.
-      </p>
+      <div class="section-heading fade-up">
+
+        <span class="eyebrow">
+          Selected Work
+        </span>
+
+        <h2>
+          Experience in action.
+        </h2>
+
+        <p>
+          A closer look at real systems, workflows, documentation,
+          and digital projects I've supported across customer service,
+          operations, CRM, real estate, SEO, social media, and outreach.
+        </p>
+
+      </div>
+
+
+      <!-- CASE STUDY 1 -->
+
+      <article class="case-study fade-up">
+
+        <div class="case-grid">
+
+          <div class="case-visual">
+
+            <div class="portfolio-gallery">
+
+              <button
+                class="portfolio-shot"
+                type="button"
+                data-image="images/servicecore customers.png"
+                data-caption="Customer and CRM record management in ServiceCore"
+                aria-label="View ServiceCore customer management screenshot"
+              >
+                <img
+                  src="images/servicecore customers.png"
+                  alt="ServiceCore customer management workspace"
+                  loading="lazy"
+                >
+                <span class="shot-caption">
+                  Customer & CRM Management
+                </span>
+              </button>
+
+              <button
+                class="portfolio-shot"
+                type="button"
+                data-image="images/servicecore schedule.png"
+                data-caption="Service scheduling and operational coordination in ServiceCore"
+                aria-label="View ServiceCore scheduling screenshot"
+              >
+                <img
+                  src="images/servicecore schedule.png"
+                  alt="ServiceCore scheduling workspace"
+                  loading="lazy"
+                >
+                <span class="shot-caption">
+                  Scheduling & Service Coordination
+                </span>
+              </button>
+
+            </div>
+
+            <p class="gallery-note">
+              Selected operational work samples. Click an image to enlarge.
+            </p>
+
+          </div>
+
+
+          <div class="case-content">
+
+            <div class="project-label">
+              Customer Support × Business Operations
+            </div>
+
+            <h3>
+              Customer Support & Service Operations
+            </h3>
+
+            <p>
+              Support the day-to-day operations of a growing U.S.
+              service business across customer communication,
+              CRM management, scheduling, billing, field coordination,
+              and recurring administrative workflows.
+            </p>
+
+            <ul class="case-points">
+
+              <li>
+                <strong>Challenge:</strong>
+                Keep customer, job, technician, payment, and service
+                information organized across recurring operations.
+              </li>
+
+              <li>
+                <strong>Approach:</strong>
+                Maintain customer and job records, support estimates
+                and billing, coordinate scheduling, communicate with
+                customers, and manage follow-ups.
+              </li>
+
+              <li>
+                <strong>Outcome:</strong>
+                Helped maintain more organized customer and
+                back-office workflows across daily operations.
+              </li>
+
+            </ul>
+
+            <div class="tags">
+              <span class="tag">ServiceCore</span>
+              <span class="tag">Customer Support</span>
+              <span class="tag">CRM</span>
+              <span class="tag">Operations</span>
+              <span class="tag">Scheduling</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- CASE STUDY 2 -->
+
+      <article class="case-study fade-up">
+
+        <div class="case-grid">
+
+          <div class="case-visual">
+
+            <div class="portfolio-gallery single">
+
+              <button
+                class="portfolio-shot tall"
+                type="button"
+                data-image="images/sop playbook.png"
+                data-caption="Operational SOP playbook and process documentation"
+                aria-label="View SOP playbook screenshot"
+              >
+                <img
+                  src="images/sop playbook.png"
+                  alt="Operational SOP playbook"
+                  loading="lazy"
+                >
+                <span class="shot-caption">
+                  SOP Playbook & Process Documentation
+                </span>
+              </button>
+
+            </div>
+
+            <p class="gallery-note">
+              Process documentation sample. Click to enlarge.
+            </p>
+
+          </div>
+
+
+          <div class="case-content">
+
+            <div class="project-label">
+              Process Development
+            </div>
+
+            <h3>
+              SOPs, Documentation & Onboarding
+            </h3>
+
+            <p>
+              Turned recurring operational responsibilities into
+              documented processes that could be followed,
+              maintained, and used as reference material for training.
+            </p>
+
+            <ul class="case-points">
+
+              <li>
+                <strong>Challenge:</strong>
+                Recurring processes needed clearer documentation
+                and repeatable workflows.
+              </li>
+
+              <li>
+                <strong>Approach:</strong>
+                Created SOPs, checklists, training guides,
+                operational procedures, and supporting trackers.
+              </li>
+
+              <li>
+                <strong>Outcome:</strong>
+                Created clearer reference materials for recurring
+                responsibilities and onboarding.
+              </li>
+
+            </ul>
+
+            <div class="tags">
+              <span class="tag">SOPs</span>
+              <span class="tag">Documentation</span>
+              <span class="tag">Training</span>
+              <span class="tag">Process Improvement</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- CASE STUDY 3 -->
+
+      <article class="case-study fade-up">
+
+        <div class="case-grid">
+
+          <div class="case-visual">
+
+            <div class="portfolio-gallery">
+
+              <button
+                class="portfolio-shot"
+                type="button"
+                data-image="images/resimplicrm.png"
+                data-caption="Real estate CRM and lead management workflow"
+                aria-label="View REsimpli CRM screenshot"
+              >
+                <img
+                  src="images/resimplicrm.png"
+                  alt="REsimpli real estate CRM workspace"
+                  loading="lazy"
+                >
+                <span class="shot-caption">
+                  CRM & Lead Management
+                </span>
+              </button>
+
+              <button
+                class="portfolio-shot"
+                type="button"
+                data-image="images/realestateemail.png"
+                data-caption="Real estate opportunity and email monitoring"
+                aria-label="View real estate email screenshot"
+              >
+                <img
+                  src="images/realestateemail.png"
+                  alt="Real estate email and opportunity monitoring"
+                  loading="lazy"
+                >
+                <span class="shot-caption">
+                  Email & Opportunity Monitoring
+                </span>
+              </button>
+
+            </div>
+
+            <p class="gallery-note">
+              Real estate administrative work samples. Click an image to enlarge.
+            </p>
+
+          </div>
+
+
+          <div class="case-content">
+
+            <div class="project-label">
+              CRM & Lead Management
+            </div>
+
+            <h3>
+              Real Estate Virtual Assistance
+            </h3>
+
+            <p>
+              Supported a U.S. real estate client with CRM
+              organization, lead information, communication records,
+              opportunity monitoring, follow-ups, and recurring
+              administrative work.
+            </p>
+
+            <ul class="case-points">
+
+              <li>
+                <strong>Challenge:</strong>
+                Keep lead information, communication history,
+                and follow-up activity organized.
+              </li>
+
+              <li>
+                <strong>Approach:</strong>
+                Maintained REsimpli records, organized lead
+                information, monitored opportunities, and supported
+                recurring follow-up and administrative tasks.
+              </li>
+
+              <li>
+                <strong>Outcome:</strong>
+                Helped maintain organized lead records and consistent
+                administrative support.
+              </li>
+
+            </ul>
+
+            <div class="tags">
+              <span class="tag">REsimpli</span>
+              <span class="tag">CRM</span>
+              <span class="tag">Lead Management</span>
+              <span class="tag">Email Support</span>
+              <span class="tag">Administration</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- CASE STUDY 4 -->
+
+      <article class="case-study fade-up">
+
+        <div class="case-grid">
+
+          <div class="case-visual">
+
+            <div class="portfolio-gallery four">
+
+              <button
+                class="portfolio-shot"
+                type="button"
+                data-image="images/websitehomepage.png"
+                data-caption="Website management and service-business homepage"
+                aria-label="View website homepage screenshot"
+              >
+                <img
+                  src="images/websitehomepage.png"
+                  alt="Service business website homepage"
+                  loading="lazy"
+                >
+                <span class="shot-caption">
+                  Website Management
+                </span>
+              </button>
+
+              <button
+                class="portfolio-shot"
+                type="button"
+                data-image="images/phoenixseopage.png"
+                data-caption="Phoenix local service area SEO page"
+                aria-label="View Phoenix SEO page screenshot"
+              >
+                <img
+                  src="images/phoenixseopage.png"
+                  alt="Phoenix local SEO service area page"
+                  loading="lazy"
+                >
+                <span class="shot-caption">
+                  Local SEO Pages
+                </span>
+              </button>
+
+              <button
+                class="portfolio-shot"
+                type="button"
+                data-image="images/yelplisting.png"
+                data-caption="Local business listing management"
+                aria-label="View Yelp listing screenshot"
+              >
+                <img
+                  src="images/yelplisting.png"
+                  alt="Local business Yelp listing"
+                  loading="lazy"
+                >
+                <span class="shot-caption">
+                  Business Listings
+                </span>
+              </button>
+
+              <button
+                class="portfolio-shot"
+                type="button"
+                data-image="images/seoprogresstracker.png"
+                data-caption="Local search baseline and SEO progress tracking"
+                aria-label="View SEO progress tracker screenshot"
+              >
+                <img
+                  src="images/seoprogresstracker.png"
+                  alt="Local search and SEO progress tracker"
+                  loading="lazy"
+                >
+                <span class="shot-caption">
+                  SEO Progress Tracking
+                </span>
+              </button>
+
+            </div>
+
+            <p class="gallery-note">
+              Website and local search work samples. Click an image to enlarge.
+            </p>
+
+          </div>
+
+
+          <div class="case-content">
+
+            <div class="project-label">
+              Digital Business Support
+            </div>
+
+            <h3>
+              Website, Local SEO & Online Presence
+            </h3>
+
+            <p>
+              Supported the digital presence of a local service
+              business through website management, local search
+              initiatives, business listings, location pages,
+              tracking, and ongoing optimization work.
+            </p>
+
+            <ul class="case-points">
+
+              <li>
+                <strong>Challenge:</strong>
+                Strengthen and maintain the company's online presence
+                across its website and local search channels.
+              </li>
+
+              <li>
+                <strong>Approach:</strong>
+                Updated Wix content, worked on service-area pages,
+                maintained business listings, researched backlink
+                opportunities, and tracked local search progress.
+              </li>
+
+              <li>
+                <strong>Outcome:</strong>
+                Built a more organized foundation for ongoing website
+                and local search initiatives.
+              </li>
+
+            </ul>
+
+            <div class="tags">
+              <span class="tag">Wix</span>
+              <span class="tag">Local SEO</span>
+              <span class="tag">Google Business Profile</span>
+              <span class="tag">Business Listings</span>
+              <span class="tag">SEO Tracking</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- CASE STUDY 5 -->
+
+      <article class="case-study fade-up">
+
+        <div class="case-grid">
+
+          <div class="case-visual">
+
+            <div class="portfolio-gallery">
+
+              <button
+                class="portfolio-shot"
+                type="button"
+                data-image="images/socialmediainsights.png"
+                data-caption="Social media performance monitoring and insights"
+                aria-label="View social media insights screenshot"
+              >
+                <img
+                  src="images/socialmediainsights.png"
+                  alt="Social media performance insights"
+                  loading="lazy"
+                >
+                <span class="shot-caption">
+                  Performance & Insights
+                </span>
+              </button>
+
+              <button
+                class="portfolio-shot"
+                type="button"
+                data-image="images/contentcalendar.png"
+                data-caption="Social media content planning and calendar management"
+                aria-label="View content calendar screenshot"
+              >
+                <img
+                  src="images/contentcalendar.png"
+                  alt="Social media content calendar"
+                  loading="lazy"
+                >
+                <span class="shot-caption">
+                  Content Planning
+                </span>
+              </button>
+
+            </div>
+
+            <p class="gallery-note">
+              Social media planning and performance samples. Click an image to enlarge.
+            </p>
+
+          </div>
+
+
+          <div class="case-content">
+
+            <div class="project-label">
+              Social Media & Content
+            </div>
+
+            <h3>
+              Content Planning & Performance Support
+            </h3>
+
+            <p>
+              Supported social media operations through content
+              planning, calendar organization, publishing workflows,
+              and performance monitoring.
+            </p>
+
+            <ul class="case-points">
+
+              <li>
+                <strong>Challenge:</strong>
+                Keep content organized while maintaining visibility
+                into publishing schedules and performance.
+              </li>
+
+              <li>
+                <strong>Approach:</strong>
+                Organized content calendars, supported post planning,
+                maintained publishing information, and reviewed
+                platform insights.
+              </li>
+
+              <li>
+                <strong>Outcome:</strong>
+                Created a clearer workflow for planning, organizing,
+                and reviewing social media activity.
+              </li>
+
+            </ul>
+
+            <div class="tags">
+              <span class="tag">Meta Business Suite</span>
+              <span class="tag">Notion</span>
+              <span class="tag">Content Planning</span>
+              <span class="tag">Social Media</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- CASE STUDY 6 -->
+
+      <article class="case-study fade-up">
+
+        <div class="case-grid">
+
+          <div class="case-visual">
+
+            <div class="portfolio-gallery single">
+
+              <button
+                class="portfolio-shot"
+                type="button"
+                data-image="images/leadlist.png"
+                data-caption="Construction lead research and outreach database"
+                aria-label="View construction lead list screenshot"
+              >
+                <img
+                  src="images/leadlist.png"
+                  alt="Construction lead research and outreach spreadsheet"
+                  loading="lazy"
+                >
+                <span class="shot-caption">
+                  Lead Research & Outreach Database
+                </span>
+              </button>
+
+            </div>
+
+            <p class="gallery-note">
+              Research and outreach workflow sample. Click to enlarge.
+            </p>
+
+          </div>
+
+
+          <div class="case-content">
+
+            <div class="project-label">
+              Research & Outreach
+            </div>
+
+            <h3>
+              Lead Research & Campaign Organization
+            </h3>
+
+            <p>
+              Built and maintained structured prospect lists to
+              support business development and outbound outreach
+              for a local service business.
+            </p>
+
+            <ul class="case-points">
+
+              <li>
+                <strong>Challenge:</strong>
+                Identify relevant companies and organize the
+                information needed for targeted outreach.
+              </li>
+
+              <li>
+                <strong>Approach:</strong>
+                Researched companies, target areas, decision-makers,
+                contact information, company fit, and supporting
+                information for outreach.
+              </li>
+
+              <li>
+                <strong>Outcome:</strong>
+                Created an organized lead database that could support
+                structured email and follow-up campaigns.
+              </li>
+
+            </ul>
+
+            <div class="tags">
+              <span class="tag">Lead Research</span>
+              <span class="tag">Google Sheets</span>
+              <span class="tag">Outreach</span>
+              <span class="tag">Data Organization</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
 
     </div>
 
+  </section>
+
+
+  <!-- EXPERIENCE -->
+
+  <section class="experience" id="experience">
+
+    <div class="container">
+
+      <div class="section-heading fade-up">
+
+        <span class="eyebrow">
+          Professional Experience
+        </span>
+
+        <h2>
+          A background built across support and operations.
+        </h2>
+
+      </div>
+
+
+      <div class="fade-up">
+
+
+        <div class="experience-item">
+
+          <div>
+
+            <h3>
+              Operations & Customer Support Specialist
+            </h3>
+
+            <div class="experience-date">
+              July 2025 – Present
+            </div>
+
+            <div class="experience-company">
+              US Client · Service & Vacation Rental Operations
+            </div>
+
+          </div>
+
+          <p>
+            Support customer and guest communication, CRM records,
+            scheduling and service workflows, estimates, invoices,
+            payments, technician and vendor coordination,
+            documentation, website management, local SEO,
+            outbound campaigns, and recurring operational tracking.
+          </p>
+
+        </div>
+
+
+        <div class="experience-item">
+
+          <div>
+
+            <h3>
+              Real Estate Virtual Assistant
+            </h3>
+
+            <div class="experience-date">
+              May 2025 – May 2026
+            </div>
+
+            <div class="experience-company">
+              US Real Estate Client
+            </div>
+
+          </div>
+
+          <p>
+            Used REsimpli to organize lead information and
+            communication records while supporting lead
+            follow-ups, database organization, social media,
+            and recurring administrative tasks.
+          </p>
+
+        </div>
+
+
+        <div class="experience-item">
+
+          <div>
+
+            <h3>
+              Executive Assistant & Community Manager
+            </h3>
+
+            <div class="experience-date">
+              June 2025 – September 2025
+            </div>
+
+            <div class="experience-company">
+              Confidential International Fitness Client
+            </div>
+
+          </div>
+
+          <p>
+            Supported coaching clients through member chats
+            while maintaining updates, reminders,
+            announcements, support resources, and recurring
+            executive and administrative tasks.
+          </p>
+
+        </div>
+
+
+        <div class="experience-item">
+
+          <div>
+
+            <h3>
+              Customer Support Representative
+            </h3>
+
+            <div class="experience-date">
+              2024 – 2025
+            </div>
+
+            <div class="experience-company">
+              TaskUs · UK Financial Account
+            </div>
+
+          </div>
+
+          <p>
+            Managed a high-volume customer support queue,
+            including Intercom chats and tickets, payment
+            support, card decline and account inquiries,
+            vulnerable-customer support, documentation,
+            confidentiality, and escalation.
+          </p>
+
+        </div>
+
+
+        <div class="experience-item">
+
+          <div>
+
+            <h3>
+              Social Media Manager & Administrative Assistant
+            </h3>
+
+            <div class="experience-date">
+              2022 – 2024
+            </div>
+
+            <div class="experience-company">
+              Mcars PH · Automotive Dealership
+            </div>
+
+          </div>
+
+          <p>
+            Provided chat and phone support, outbound
+            follow-ups, appointment assistance, Facebook
+            message management, and accurate customer,
+            inquiry, and sales records.
+          </p>
+
+        </div>
+
+
+        <div class="experience-item">
+
+          <div>
+
+            <h3>
+              Social Media Content Moderator
+            </h3>
+
+            <div class="experience-date">
+              2022 · 6-Month Role
+            </div>
+
+            <div class="experience-company">
+              Alorica
+            </div>
+
+          </div>
+
+          <p>
+            Reviewed and moderated video content against
+            platform community guidelines while maintaining
+            consistent attention to accuracy and detail.
+          </p>
+
+        </div>
+
+
+        <div class="experience-item">
+
+          <div>
+
+            <h3>
+              Customer Service Representative
+            </h3>
+
+            <div class="experience-date">
+              2021 · Seasonal Role
+            </div>
+
+            <div class="experience-company">
+              IBEX · E-commerce Support
+            </div>
+
+          </div>
+
+          <p>
+            Handled refunds, returns, order tracking, and
+            general customer inquiries while following
+            established customer support procedures.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TOOLS -->
+
+  <section id="tools">
+
+    <div class="container">
+
+      <div class="section-heading fade-up">
+
+        <span class="eyebrow">
+          Tools & Platforms
+        </span>
+
+        <h2>
+          Systems I work with.
+        </h2>
+
+      </div>
+
+
+      <div class="tools-grid fade-up">
+
+        <div class="tool-card">
+
+          <h3>
+            Support & CRM
+          </h3>
+
+          <p>
+            Intercom<br>
+            ServiceCore<br>
+            REsimpli<br>
+            Notion<br>
+            Airbnb<br>
+            Vrbo
+          </p>
+
+        </div>
+
+
+        <div class="tool-card">
+
+          <h3>
+            Communication
+          </h3>
+
+          <p>
+            Gmail<br>
+            Microsoft Outlook<br>
+            Quo<br>
+            Slack<br>
+            Zoom<br>
+            Loom<br>
+            WhatsApp
+          </p>
+
+        </div>
+
+
+        <div class="tool-card">
+
+          <h3>
+            Marketing & Web
+          </h3>
+
+          <p>
+            Wix<br>
+            Meta Business Suite<br>
+            Canva<br>
+            Google Business Profile<br>
+            Buffer
+          </p>
+
+        </div>
+
+
+        <div class="tool-card">
+
+          <h3>
+            AI & Productivity
+          </h3>
+
+          <p>
+            Google Workspace<br>
+            Microsoft Office<br>
+            ChatGPT<br>
+            Claude<br>
+            Gemini<br>
+            Grok<br>
+            ElevenLabs<br>
+            Deepseek
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <div>
+
+  <span class="eyebrow">
+    About Me
+  </span>
+
+  <h2>
+    A little about how I work.
+  </h2>
+
+  <div class="about-photo-wrap">
+    <img
+      src="images/ProfessionalPhoto.png"
+      alt="Professional photo of Alyssa Estrella"
+      class="about-photo"
+      loading="lazy"
+    >
   </div>
 
-</section>
+</div>
+
+
+      <div class="about-copy">
+
+        <p>
+          I'm a customer support and business operations
+          professional with more than four years of experience
+          supporting customers, remote teams, and growing businesses.
+        </p>
+
+        <p>
+          My experience has developed beyond one specific role.
+          I've worked across customer service, CRM management,
+          administrative and executive support, documentation,
+          social media, websites, SEO, and daily business operations.
+        </p>
+
+        <p>
+          One of my strengths is being able to understand both
+          sides of a business: the customer-facing experience
+          and the systems behind it.
+        </p>
+
+        <p>
+          I value clear communication, accurate work,
+          organized processes, and reliable follow-through.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section class="contact" id="contact">
+
+    <div class="container fade-up">
+
+      <span class="eyebrow">
+        Let's Connect
+      </span>
+
+      <h2>
+        Let's work together.
+      </h2>
+
+      <p>
+        I'm open to long-term remote opportunities in customer
+        support, business operations, CRM, executive or
+        administrative support, and digital business support.
+      </p>
+
+
+      <div class="contact-buttons">
+
+        <a
+          href="mailto:alyssaestrella0@gmail.com"
+          class="btn btn-primary"
+        >
+          Email Me
+        </a>
+
+        <a
+          href="resume.pdf"
+          target="_blank"
+          class="btn btn-secondary"
+        >
+          View Resume
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <span>
+        © <span id="year"></span> Alyssa Mae M. Estrella
+      </span>
+
+      <span>
+        Customer Support & Business Operations Specialist
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- IMAGE LIGHTBOX -->
+
+  <div
+    class="lightbox"
+    id="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Portfolio image preview"
+  >
+
+    <div class="lightbox-inner">
+
+      <img
+        src=""
+        alt=""
+        class="lightbox-image"
+        id="lightboxImage"
+      >
+
+    </div>
+
+    <button
+      type="button"
+      class="lightbox-close"
+      id="lightboxClose"
+      aria-label="Close image preview"
+    >
+      ×
+    </button>
+
+    <div
+      class="lightbox-caption"
+      id="lightboxCaption"
+    ></div>
+
+  </div>
+
+
+  <script>
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    /* MOBILE MENU */
+
+    const menuButton =
+      document.getElementById("menuButton");
+
+    const navLinks =
+      document.getElementById("navLinks");
+
+
+    menuButton.addEventListener("click", function () {
+
+      const open =
+        navLinks.classList.toggle("open");
+
+      menuButton.textContent =
+        open ? "CLOSE" : "MENU";
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        open
+      );
+
+    });
+
+
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+          navLinks.classList.remove("open");
+
+          menuButton.textContent = "MENU";
+
+          menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        });
+
+      });
+
+
+    /* SCROLL ANIMATIONS */
+
+    const reduceMotion =
+      window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+
+    if (reduceMotion) {
+
+      document
+        .querySelectorAll(".fade-up")
+        .forEach(function(element) {
+
+          element.classList.add("visible");
+
+        });
+
+    } else {
+
+      const observer =
+        new IntersectionObserver(
+
+          function(entries) {
+
+            entries.forEach(function(entry) {
+
+              if (entry.isIntersecting) {
+
+                entry.target.classList.add(
+                  "visible"
+                );
+
+                observer.unobserve(
+                  entry.target
+                );
+
+              }
+
+            });
+
+          },
+
+          {
+            threshold: .08
+          }
+
+        );
+
+
+      document
+        .querySelectorAll(".fade-up")
+        .forEach(function(element) {
+
+          observer.observe(element);
+
+        });
+
+    }
+
+
+    /* PORTFOLIO IMAGE LIGHTBOX */
+
+    const lightbox =
+      document.getElementById("lightbox");
+
+    const lightboxImage =
+      document.getElementById("lightboxImage");
+
+    const lightboxCaption =
+      document.getElementById("lightboxCaption");
+
+    const lightboxClose =
+      document.getElementById("lightboxClose");
+
+
+    function openLightbox(button) {
+
+      const image =
+        button.getAttribute("data-image");
+
+      const caption =
+        button.getAttribute("data-caption") || "";
+
+      lightboxImage.src = image;
+
+      lightboxImage.alt = caption;
+
+      lightboxCaption.textContent = caption;
+
+      lightbox.classList.add("open");
+
+      document.body.classList.add("modal-open");
+
+      lightboxClose.focus();
+
+    }
+
+
+    function closeLightbox() {
+
+      lightbox.classList.remove("open");
+
+      document.body.classList.remove("modal-open");
+
+      lightboxImage.src = "";
+
+    }
+
+
+    document
+      .querySelectorAll(".portfolio-shot")
+      .forEach(function(button) {
+
+        button.addEventListener(
+          "click",
+          function() {
+
+            openLightbox(button);
+
+          }
+        );
+
+      });
+
+
+    lightboxClose.addEventListener(
+      "click",
+      closeLightbox
+    );
+
+
+    lightbox.addEventListener(
+      "click",
+      function(event) {
+
+        if (
+          event.target === lightbox ||
+          event.target.classList.contains("lightbox-inner")
+        ) {
+
+          closeLightbox();
+
+        }
+
+      }
+    );
+
+
+    document.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (
+          event.key === "Escape" &&
+          lightbox.classList.contains("open")
+        ) {
+
+          closeLightbox();
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+</html>
