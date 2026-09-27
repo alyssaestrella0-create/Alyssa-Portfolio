@@ -55,9 +55,22 @@
       -webkit-font-smoothing: antialiased;
     }
 
+    body.modal-open {
+      overflow: hidden;
+    }
+
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button {
+      font: inherit;
     }
 
     .container {
@@ -335,7 +348,7 @@
     }
 
     .case-study {
-      padding: 70px 0;
+      padding: 80px 0;
       border-top: 1px solid var(--border);
     }
 
@@ -345,7 +358,7 @@
 
     .case-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.08fr .92fr;
       gap: 70px;
       align-items: center;
     }
@@ -416,327 +429,163 @@
     }
 
     /* =========================
-       TEMPORARY MOCKUP VISUALS
+       REAL PORTFOLIO SCREENSHOTS
     ========================== */
 
     .case-visual {
       min-width: 0;
     }
 
-    .mockup {
+    .portfolio-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .portfolio-gallery.single {
+      grid-template-columns: 1fr;
+    }
+
+    .portfolio-gallery.four {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .portfolio-shot {
+      position: relative;
       overflow: hidden;
-      min-height: 410px;
+      width: 100%;
+      min-height: 185px;
+      padding: 0;
       background: #E8E1D9;
       border: 1px solid #CEC4BA;
-      box-shadow: 0 25px 60px rgba(23, 22, 20, .09);
+      cursor: zoom-in;
+      box-shadow: 0 16px 38px rgba(23, 22, 20, .08);
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
     }
 
-    .mockup-browser {
-      padding: 12px 16px;
+    .portfolio-shot:hover {
+      transform: translateY(-3px);
+      border-color: var(--taupe);
+      box-shadow: 0 22px 45px rgba(23, 22, 20, .13);
+    }
+
+    .portfolio-shot:focus-visible {
+      outline: 2px solid var(--brown);
+      outline-offset: 3px;
+    }
+
+    .portfolio-shot img {
+      width: 100%;
+      height: 100%;
+      min-height: 185px;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform .35s ease;
+    }
+
+    .portfolio-shot:hover img {
+      transform: scale(1.015);
+    }
+
+    .portfolio-gallery.single .portfolio-shot img {
+      min-height: 360px;
+      aspect-ratio: 16 / 10;
+      object-fit: contain;
+      background: #EEE8E1;
+    }
+
+    .portfolio-shot.tall img {
+      object-fit: contain;
+      background: #EEE8E1;
+    }
+
+    .shot-caption {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      max-width: calc(100% - 20px);
+      padding: 7px 10px;
+      background: rgba(23, 22, 20, .88);
+      color: #F7F4EF;
+      font-size: .61rem;
+      font-weight: 600;
+      letter-spacing: .02em;
+      text-align: left;
+    }
+
+    .gallery-note {
+      margin-top: 12px;
+      color: var(--stone);
+      font-size: .68rem;
+    }
+
+    /* =========================
+       IMAGE LIGHTBOX
+    ========================== */
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 3000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      background: rgba(15, 14, 13, .94);
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox-inner {
+      position: relative;
+      width: min(1450px, 96vw);
+      max-height: 92vh;
       display: flex;
       align-items: center;
-      gap: 7px;
-      background: var(--black);
+      justify-content: center;
     }
 
-    .mockup-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #8F867D;
+    .lightbox-image {
+      max-width: 100%;
+      max-height: 88vh;
+      object-fit: contain;
+      box-shadow: 0 20px 80px rgba(0, 0, 0, .35);
     }
 
-    .mockup-address {
-      width: 44%;
-      height: 6px;
-      margin-left: 12px;
-      background: #403C37;
-      border-radius: 10px;
-    }
-
-    .mockup-body {
-      min-height: 375px;
-      padding: 24px;
-    }
-
-    .mockup-heading {
-      margin-bottom: 5px;
+    .lightbox-close {
+      position: fixed;
+      top: 22px;
+      right: 26px;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--cream);
       color: var(--black);
-      font-size: .68rem;
-      font-weight: 700;
-      letter-spacing: .12em;
-      text-transform: uppercase;
+      border: 0;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      cursor: pointer;
     }
 
-    .mockup-subheading {
-      margin-bottom: 22px;
-      color: #7A7169;
-      font-size: .62rem;
-    }
-
-    /* SUPPORT MOCKUP */
-
-    .support-layout {
-      display: grid;
-      grid-template-columns: .72fr 1.28fr;
-      gap: 12px;
-    }
-
-    .ticket-list {
-      padding: 12px;
-      background: #D8CFC6;
-    }
-
-    .ticket {
-      height: 54px;
-      margin-bottom: 8px;
-      padding: 10px;
-      background: #F7F4EF;
-      border-left: 3px solid var(--brown);
-    }
-
-    .fake-line {
-      height: 5px;
-      margin-bottom: 7px;
-      background: #C8BEB5;
-      border-radius: 5px;
-    }
-
-    .fake-line.dark {
-      background: #85796E;
-    }
-
-    .fake-line.short {
-      width: 55%;
-    }
-
-    .fake-line.medium {
-      width: 75%;
-    }
-
-    .conversation {
-      padding: 20px;
-      background: #F7F4EF;
-    }
-
-    .conversation-header {
-      margin-bottom: 20px;
-      padding-bottom: 13px;
-      border-bottom: 1px solid #DDD4CC;
-    }
-
-    .message {
-      width: 78%;
-      margin-bottom: 12px;
-      padding: 13px;
-      background: #E1D9D1;
-      border-radius: 3px;
-    }
-
-    .message.agent {
-      margin-left: auto;
-      background: var(--brown);
-    }
-
-    .message.agent .fake-line {
-      background: #AFA397;
-    }
-
-    /* OPERATIONS MOCKUP */
-
-    .ops-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-bottom: 15px;
-    }
-
-    .stat {
-      padding: 16px;
-      background: #F7F4EF;
-    }
-
-    .stat-number {
-      margin-bottom: 3px;
-      font-family: var(--serif);
-      font-size: 1.7rem;
-    }
-
-    .stat-label {
-      color: #82786F;
-      font-size: .55rem;
-      text-transform: uppercase;
-    }
-
-    .ops-table {
-      padding: 15px;
-      background: #F7F4EF;
-    }
-
-    .table-row {
-      display: grid;
-      grid-template-columns: 1.2fr .8fr .8fr;
-      gap: 12px;
-      padding: 12px 5px;
-      border-bottom: 1px solid #DDD4CC;
-    }
-
-    .status-pill {
-      width: 55px;
-      height: 15px;
-      background: #A89B8F;
-      border-radius: 20px;
-    }
-
-    /* SOP MOCKUP */
-
-    .docs-layout {
-      display: grid;
-      grid-template-columns: .55fr 1.45fr;
-      min-height: 320px;
-      background: #F7F4EF;
-    }
-
-    .docs-sidebar {
-      padding: 18px 12px;
-      background: var(--brown);
-    }
-
-    .sidebar-line {
-      height: 7px;
-      margin-bottom: 14px;
-      background: #8C7C6D;
-    }
-
-    .sidebar-line.active {
-      background: #E0D9D3;
-    }
-
-    .docs-page {
-      padding: 30px;
-    }
-
-    .doc-title {
-      width: 55%;
-      height: 16px;
-      margin-bottom: 25px;
-      background: var(--black);
-    }
-
-    .doc-section {
-      margin-bottom: 24px;
-    }
-
-    .doc-section-title {
-      width: 32%;
-      height: 7px;
-      margin-bottom: 12px;
-      background: var(--brown);
-    }
-
-    .doc-line {
-      height: 5px;
-      margin-bottom: 8px;
-      background: #D2C9C1;
-    }
-
-    /* CRM MOCKUP */
-
-    .pipeline {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-    }
-
-    .pipeline-column {
-      padding: 12px;
-      background: #D8CFC6;
-    }
-
-    .pipeline-title {
-      margin-bottom: 12px;
-      color: #71675E;
-      font-size: .55rem;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    .lead-card {
-      margin-bottom: 9px;
-      padding: 12px;
-      background: #F7F4EF;
-      box-shadow: 0 3px 8px rgba(23, 22, 20, .04);
-    }
-
-    .lead-card .fake-line {
-      height: 4px;
-    }
-
-    /* SEO MOCKUP */
-
-    .seo-layout {
-      display: grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 12px;
-    }
-
-    .seo-panel {
-      padding: 18px;
-      background: #F7F4EF;
-    }
-
-    .search-result {
-      margin-bottom: 18px;
-    }
-
-    .search-title {
-      width: 70%;
-      height: 8px;
-      margin-bottom: 8px;
-      background: var(--brown);
-    }
-
-    .search-url {
-      width: 45%;
-      height: 4px;
-      margin-bottom: 8px;
-      background: #A99D91;
-    }
-
-    .map-box {
-      position: relative;
-      min-height: 235px;
-      overflow: hidden;
-      background:
-        linear-gradient(45deg, transparent 48%, #C4BAB1 49%, #C4BAB1 51%, transparent 52%),
-        linear-gradient(-45deg, transparent 48%, #CDC4BB 49%, #CDC4BB 51%, transparent 52%),
-        #DDD5CD;
-      background-size: 55px 55px;
-    }
-
-    .map-pin {
-      position: absolute;
-      width: 18px;
-      height: 18px;
-      background: var(--brown);
-      border-radius: 50% 50% 50% 0;
-      transform: rotate(-45deg);
-    }
-
-    .pin-1 {
-      top: 35%;
-      left: 30%;
-    }
-
-    .pin-2 {
-      top: 58%;
-      left: 64%;
-    }
-
-    .pin-3 {
-      top: 23%;
-      left: 70%;
+    .lightbox-caption {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      max-width: 80%;
+      padding: 8px 14px;
+      background: rgba(23, 22, 20, .8);
+      color: #F7F4EF;
+      font-size: .72rem;
+      text-align: center;
     }
 
     /* =========================
@@ -1026,6 +875,14 @@
         order: 2 !important;
       }
 
+      .portfolio-shot img {
+        min-height: 220px;
+      }
+
+      .portfolio-gallery.single .portfolio-shot img {
+        min-height: 300px;
+      }
+
       .services-grid {
         grid-template-columns: 1fr;
       }
@@ -1074,42 +931,29 @@
         width: 100%;
       }
 
-      .mockup {
-        min-height: auto;
-      }
-
-      .mockup-body {
-        min-height: 310px;
-        padding: 15px;
-      }
-
-      .support-layout,
-      .seo-layout {
+      .portfolio-gallery,
+      .portfolio-gallery.four {
         grid-template-columns: 1fr;
       }
 
-      .ticket-list {
-        display: none;
+      .portfolio-shot,
+      .portfolio-shot img,
+      .portfolio-gallery.single .portfolio-shot img {
+        min-height: 210px;
       }
 
-      .pipeline {
-        gap: 5px;
+      .lightbox {
+        padding: 15px;
       }
 
-      .pipeline-column {
-        padding: 7px;
+      .lightbox-close {
+        top: 12px;
+        right: 12px;
       }
 
-      .lead-card {
-        padding: 8px;
-      }
-
-      .docs-layout {
-        grid-template-columns: .35fr 1.65fr;
-      }
-
-      .docs-page {
-        padding: 20px;
+      .lightbox-caption {
+        max-width: 90%;
+        width: max-content;
       }
 
       .tools-grid {
@@ -1131,6 +975,11 @@
       .fade-up {
         opacity: 1;
         transform: none;
+        transition: none;
+      }
+
+      .portfolio-shot,
+      .portfolio-shot img {
         transition: none;
       }
 
@@ -1286,13 +1135,9 @@
 
         <div class="service">
 
-          <div class="service-number">
-            01
-          </div>
+          <div class="service-number">01</div>
 
-          <h3>
-            Customer Support & Experience
-          </h3>
+          <h3>Customer Support & Experience</h3>
 
           <p>
             Chat, email and phone support, ticket management,
@@ -1305,13 +1150,9 @@
 
         <div class="service">
 
-          <div class="service-number">
-            02
-          </div>
+          <div class="service-number">02</div>
 
-          <h3>
-            Business Operations
-          </h3>
+          <h3>Business Operations</h3>
 
           <p>
             Workflow coordination, scheduling support, service
@@ -1324,13 +1165,9 @@
 
         <div class="service">
 
-          <div class="service-number">
-            03
-          </div>
+          <div class="service-number">03</div>
 
-          <h3>
-            CRM & Process Management
-          </h3>
+          <h3>CRM & Process Management</h3>
 
           <p>
             CRM management, lead tracking, record accuracy,
@@ -1343,13 +1180,9 @@
 
         <div class="service">
 
-          <div class="service-number">
-            04
-          </div>
+          <div class="service-number">04</div>
 
-          <h3>
-            Digital Business Support
-          </h3>
+          <h3>Digital Business Support</h3>
 
           <p>
             Website management, Wix, local SEO, business listings,
@@ -1383,9 +1216,9 @@
         </h2>
 
         <p>
-          A closer look at how I've supported customers,
-          organized workflows, maintained CRM systems,
-          documented processes, and supported growing businesses.
+          A closer look at real systems, workflows, documentation,
+          and digital projects I've supported across customer service,
+          operations, CRM, real estate, SEO, social media, and outreach.
         </p>
 
       </div>
@@ -1399,81 +1232,47 @@
 
           <div class="case-visual">
 
-            <div class="mockup">
+            <div class="portfolio-gallery">
 
-              <div class="mockup-browser">
-                <div class="mockup-dot"></div>
-                <div class="mockup-dot"></div>
-                <div class="mockup-dot"></div>
-                <div class="mockup-address"></div>
-              </div>
+              <button
+                class="portfolio-shot"
+                type="button"
+                data-image="images/servicecore_customers.png"
+                data-caption="Customer and CRM record management in ServiceCore"
+                aria-label="View ServiceCore customer management screenshot"
+              >
+                <img
+                  src="images/servicecore_customers.png"
+                  alt="ServiceCore customer management workspace"
+                  loading="lazy"
+                >
+                <span class="shot-caption">
+                  Customer & CRM Management
+                </span>
+              </button>
 
-              <div class="mockup-body">
-
-                <div class="mockup-heading">
-                  Customer Support Workspace
-                </div>
-
-                <div class="mockup-subheading">
-                  Temporary visual · replace with real screenshot later
-                </div>
-
-                <div class="support-layout">
-
-                  <div class="ticket-list">
-
-                    <div class="ticket">
-                      <div class="fake-line dark medium"></div>
-                      <div class="fake-line short"></div>
-                    </div>
-
-                    <div class="ticket">
-                      <div class="fake-line dark short"></div>
-                      <div class="fake-line medium"></div>
-                    </div>
-
-                    <div class="ticket">
-                      <div class="fake-line dark medium"></div>
-                      <div class="fake-line short"></div>
-                    </div>
-
-                    <div class="ticket">
-                      <div class="fake-line dark short"></div>
-                      <div class="fake-line medium"></div>
-                    </div>
-
-                  </div>
-
-                  <div class="conversation">
-
-                    <div class="conversation-header">
-                      <div class="fake-line dark medium"></div>
-                      <div class="fake-line short"></div>
-                    </div>
-
-                    <div class="message">
-                      <div class="fake-line dark medium"></div>
-                      <div class="fake-line"></div>
-                      <div class="fake-line short"></div>
-                    </div>
-
-                    <div class="message agent">
-                      <div class="fake-line"></div>
-                      <div class="fake-line medium"></div>
-                    </div>
-
-                    <div class="message">
-                      <div class="fake-line medium"></div>
-                      <div class="fake-line short"></div>
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
+              <button
+                class="portfolio-shot"
+                type="button"
+                data-image="images/servicecore_schedule.png"
+                data-caption="Service scheduling and operational coordination in ServiceCore"
+                aria-label="View ServiceCore scheduling screenshot"
+              >
+                <img
+                  src="images/servicecore_schedule.png"
+                  alt="ServiceCore scheduling workspace"
+                  loading="lazy"
+                >
+                <span class="shot-caption">
+                  Scheduling & Service Coordination
+                </span>
+              </button>
 
             </div>
+
+            <p class="gallery-note">
+              Selected operational work samples. Click an image to enlarge.
+            </p>
 
           </div>
 
@@ -1481,46 +1280,49 @@
           <div class="case-content">
 
             <div class="project-label">
-              Customer Experience
+              Customer Support × Business Operations
             </div>
 
             <h3>
-              Customer Support & Issue Resolution
+              Customer Support & Service Operations
             </h3>
 
             <p>
-              Supported customers in a financial-services environment
-              where accuracy, clear communication, confidentiality,
-              and appropriate escalation were essential.
+              Support the day-to-day operations of a growing U.S.
+              service business across customer communication,
+              CRM management, scheduling, billing, field coordination,
+              and recurring administrative workflows.
             </p>
 
             <ul class="case-points">
 
               <li>
                 <strong>Challenge:</strong>
-                Manage a high-volume support queue while handling
-                account, payment, and card-related concerns.
+                Keep customer, job, technician, payment, and service
+                information organized across recurring operations.
               </li>
 
               <li>
                 <strong>Approach:</strong>
-                Investigated Tier 1 concerns, documented interactions,
-                and escalated sensitive cases when required.
+                Maintain customer and job records, support estimates
+                and billing, coordinate scheduling, communicate with
+                customers, and manage follow-ups.
               </li>
 
               <li>
                 <strong>Outcome:</strong>
-                Helped maintain an organized workflow while providing
-                consistent and accurate customer assistance.
+                Helped maintain more organized customer and
+                back-office workflows across daily operations.
               </li>
 
             </ul>
 
             <div class="tags">
-              <span class="tag">Intercom</span>
+              <span class="tag">ServiceCore</span>
               <span class="tag">Customer Support</span>
-              <span class="tag">Documentation</span>
-              <span class="tag">Escalation</span>
+              <span class="tag">CRM</span>
+              <span class="tag">Operations</span>
+              <span class="tag">Scheduling</span>
             </div>
 
           </div>
@@ -1538,202 +1340,30 @@
 
           <div class="case-visual">
 
-            <div class="mockup">
+            <div class="portfolio-gallery single">
 
-              <div class="mockup-browser">
-                <div class="mockup-dot"></div>
-                <div class="mockup-dot"></div>
-                <div class="mockup-dot"></div>
-                <div class="mockup-address"></div>
-              </div>
-
-              <div class="mockup-body">
-
-                <div class="mockup-heading">
-                  Operations Dashboard
-                </div>
-
-                <div class="mockup-subheading">
-                  Temporary visual · replace with ServiceCore screenshot later
-                </div>
-
-                <div class="ops-stats">
-
-                  <div class="stat">
-                    <div class="stat-number">24</div>
-                    <div class="stat-label">Active Units</div>
-                  </div>
-
-                  <div class="stat">
-                    <div class="stat-number">08</div>
-                    <div class="stat-label">Jobs Today</div>
-                  </div>
-
-                  <div class="stat">
-                    <div class="stat-number">05</div>
-                    <div class="stat-label">Follow Ups</div>
-                  </div>
-
-                </div>
-
-                <div class="ops-table">
-
-                  <div class="table-row">
-                    <div class="fake-line dark medium"></div>
-                    <div class="fake-line medium"></div>
-                    <div class="status-pill"></div>
-                  </div>
-
-                  <div class="table-row">
-                    <div class="fake-line dark"></div>
-                    <div class="fake-line short"></div>
-                    <div class="status-pill"></div>
-                  </div>
-
-                  <div class="table-row">
-                    <div class="fake-line dark medium"></div>
-                    <div class="fake-line medium"></div>
-                    <div class="status-pill"></div>
-                  </div>
-
-                  <div class="table-row">
-                    <div class="fake-line dark short"></div>
-                    <div class="fake-line medium"></div>
-                    <div class="status-pill"></div>
-                  </div>
-
-                </div>
-
-              </div>
+              <button
+                class="portfolio-shot tall"
+                type="button"
+                data-image="images/sop_playbook.png"
+                data-caption="Operational SOP playbook and process documentation"
+                aria-label="View SOP playbook screenshot"
+              >
+                <img
+                  src="images/sop_playbook.png"
+                  alt="Operational SOP playbook"
+                  loading="lazy"
+                >
+                <span class="shot-caption">
+                  SOP Playbook & Process Documentation
+                </span>
+              </button>
 
             </div>
 
-          </div>
-
-
-          <div class="case-content">
-
-            <div class="project-label">
-              Business Operations
-            </div>
-
-            <h3>
-              Service Business Operations & CRM
-            </h3>
-
-            <p>
-              Support the day-to-day operations of a growing U.S.
-              service business across customer communication,
-              scheduling, CRM management, billing, field coordination,
-              and administrative workflows.
+            <p class="gallery-note">
+              Process documentation sample. Click to enlarge.
             </p>
-
-            <ul class="case-points">
-
-              <li>
-                <strong>Challenge:</strong>
-                Keep customer, job, technician, payment, and service
-                information organized across recurring operations.
-              </li>
-
-              <li>
-                <strong>Approach:</strong>
-                Maintain ServiceCore records, create estimates,
-                support billing, coordinate scheduling, and manage follow-ups.
-              </li>
-
-              <li>
-                <strong>Outcome:</strong>
-                Helped build more organized workflows across customer
-                and back-office operations.
-              </li>
-
-            </ul>
-
-            <div class="tags">
-              <span class="tag">ServiceCore</span>
-              <span class="tag">CRM</span>
-              <span class="tag">Operations</span>
-              <span class="tag">Scheduling</span>
-            </div>
-
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- CASE STUDY 3 -->
-
-      <article class="case-study fade-up">
-
-        <div class="case-grid">
-
-          <div class="case-visual">
-
-            <div class="mockup">
-
-              <div class="mockup-browser">
-                <div class="mockup-dot"></div>
-                <div class="mockup-dot"></div>
-                <div class="mockup-dot"></div>
-                <div class="mockup-address"></div>
-              </div>
-
-              <div class="mockup-body">
-
-                <div class="mockup-heading">
-                  SOP & Documentation Library
-                </div>
-
-                <div class="mockup-subheading">
-                  Temporary visual · replace with your SOP screenshots later
-                </div>
-
-                <div class="docs-layout">
-
-                  <div class="docs-sidebar">
-
-                    <div class="sidebar-line active"></div>
-                    <div class="sidebar-line"></div>
-                    <div class="sidebar-line"></div>
-                    <div class="sidebar-line"></div>
-                    <div class="sidebar-line"></div>
-
-                  </div>
-
-                  <div class="docs-page">
-
-                    <div class="doc-title"></div>
-
-                    <div class="doc-section">
-                      <div class="doc-section-title"></div>
-                      <div class="doc-line"></div>
-                      <div class="doc-line"></div>
-                      <div class="doc-line" style="width:75%;"></div>
-                    </div>
-
-                    <div class="doc-section">
-                      <div class="doc-section-title"></div>
-                      <div class="doc-line"></div>
-                      <div class="doc-line" style="width:88%;"></div>
-                      <div class="doc-line" style="width:65%;"></div>
-                    </div>
-
-                    <div class="doc-section">
-                      <div class="doc-section-title"></div>
-                      <div class="doc-line"></div>
-                      <div class="doc-line" style="width:72%;"></div>
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
 
           </div>
 
@@ -1751,7 +1381,7 @@
             <p>
               Turned recurring operational responsibilities into
               documented processes that could be followed,
-              maintained, and used for training.
+              maintained, and used as reference material for training.
             </p>
 
             <ul class="case-points">
@@ -1765,13 +1395,13 @@
               <li>
                 <strong>Approach:</strong>
                 Created SOPs, checklists, training guides,
-                customer-facing resources, and operational trackers.
+                operational procedures, and supporting trackers.
               </li>
 
               <li>
                 <strong>Outcome:</strong>
                 Created clearer reference materials for recurring
-                tasks and onboarding.
+                responsibilities and onboarding.
               </li>
 
             </ul>
@@ -1790,7 +1420,7 @@
       </article>
 
 
-      <!-- CASE STUDY 4 -->
+      <!-- CASE STUDY 3 -->
 
       <article class="case-study fade-up">
 
@@ -1798,93 +1428,47 @@
 
           <div class="case-visual">
 
-            <div class="mockup">
+            <div class="portfolio-gallery">
 
-              <div class="mockup-browser">
-                <div class="mockup-dot"></div>
-                <div class="mockup-dot"></div>
-                <div class="mockup-dot"></div>
-                <div class="mockup-address"></div>
-              </div>
+              <button
+                class="portfolio-shot"
+                type="button"
+                data-image="images/resimplicrm.png"
+                data-caption="Real estate CRM and lead management workflow"
+                aria-label="View REsimpli CRM screenshot"
+              >
+                <img
+                  src="images/resimplicrm.png"
+                  alt="REsimpli real estate CRM workspace"
+                  loading="lazy"
+                >
+                <span class="shot-caption">
+                  CRM & Lead Management
+                </span>
+              </button>
 
-              <div class="mockup-body">
-
-                <div class="mockup-heading">
-                  Lead Management Pipeline
-                </div>
-
-                <div class="mockup-subheading">
-                  Temporary visual · replace with REsimpli screenshot later
-                </div>
-
-                <div class="pipeline">
-
-                  <div class="pipeline-column">
-
-                    <div class="pipeline-title">
-                      New Leads
-                    </div>
-
-                    <div class="lead-card">
-                      <div class="fake-line dark medium"></div>
-                      <div class="fake-line short"></div>
-                    </div>
-
-                    <div class="lead-card">
-                      <div class="fake-line dark short"></div>
-                      <div class="fake-line medium"></div>
-                    </div>
-
-                    <div class="lead-card">
-                      <div class="fake-line dark medium"></div>
-                      <div class="fake-line short"></div>
-                    </div>
-
-                  </div>
-
-
-                  <div class="pipeline-column">
-
-                    <div class="pipeline-title">
-                      Follow Up
-                    </div>
-
-                    <div class="lead-card">
-                      <div class="fake-line dark"></div>
-                      <div class="fake-line medium"></div>
-                    </div>
-
-                    <div class="lead-card">
-                      <div class="fake-line dark medium"></div>
-                      <div class="fake-line short"></div>
-                    </div>
-
-                  </div>
-
-
-                  <div class="pipeline-column">
-
-                    <div class="pipeline-title">
-                      Active
-                    </div>
-
-                    <div class="lead-card">
-                      <div class="fake-line dark medium"></div>
-                      <div class="fake-line short"></div>
-                    </div>
-
-                    <div class="lead-card">
-                      <div class="fake-line dark short"></div>
-                      <div class="fake-line medium"></div>
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
+              <button
+                class="portfolio-shot"
+                type="button"
+                data-image="images/realestateemail.png"
+                data-caption="Real estate opportunity and email monitoring"
+                aria-label="View real estate email screenshot"
+              >
+                <img
+                  src="images/realestateemail.png"
+                  alt="Real estate email and opportunity monitoring"
+                  loading="lazy"
+                >
+                <span class="shot-caption">
+                  Email & Opportunity Monitoring
+                </span>
+              </button>
 
             </div>
+
+            <p class="gallery-note">
+              Real estate administrative work samples. Click an image to enlarge.
+            </p>
 
           </div>
 
@@ -1901,8 +1485,9 @@
 
             <p>
               Supported a U.S. real estate client with CRM
-              organization, lead information, follow-ups,
-              communication records, and recurring administrative work.
+              organization, lead information, communication records,
+              opportunity monitoring, follow-ups, and recurring
+              administrative work.
             </p>
 
             <ul class="case-points">
@@ -1916,7 +1501,8 @@
               <li>
                 <strong>Approach:</strong>
                 Maintained REsimpli records, organized lead
-                information, and supported follow-ups.
+                information, monitored opportunities, and supported
+                recurring follow-up and administrative tasks.
               </li>
 
               <li>
@@ -1931,6 +1517,7 @@
               <span class="tag">REsimpli</span>
               <span class="tag">CRM</span>
               <span class="tag">Lead Management</span>
+              <span class="tag">Email Support</span>
               <span class="tag">Administration</span>
             </div>
 
@@ -1941,7 +1528,7 @@
       </article>
 
 
-      <!-- CASE STUDY 5 -->
+      <!-- CASE STUDY 4 -->
 
       <article class="case-study fade-up">
 
@@ -1949,63 +1536,81 @@
 
           <div class="case-visual">
 
-            <div class="mockup">
+            <div class="portfolio-gallery four">
 
-              <div class="mockup-browser">
-                <div class="mockup-dot"></div>
-                <div class="mockup-dot"></div>
-                <div class="mockup-dot"></div>
-                <div class="mockup-address"></div>
-              </div>
+              <button
+                class="portfolio-shot"
+                type="button"
+                data-image="images/websitehomepage.png"
+                data-caption="Website management and service-business homepage"
+                aria-label="View website homepage screenshot"
+              >
+                <img
+                  src="images/websitehomepage.png"
+                  alt="Service business website homepage"
+                  loading="lazy"
+                >
+                <span class="shot-caption">
+                  Website Management
+                </span>
+              </button>
 
-              <div class="mockup-body">
+              <button
+                class="portfolio-shot"
+                type="button"
+                data-image="images/phoenixseopage.png"
+                data-caption="Phoenix local service area SEO page"
+                aria-label="View Phoenix SEO page screenshot"
+              >
+                <img
+                  src="images/phoenixseopage.png"
+                  alt="Phoenix local SEO service area page"
+                  loading="lazy"
+                >
+                <span class="shot-caption">
+                  Local SEO Pages
+                </span>
+              </button>
 
-                <div class="mockup-heading">
-                  Local Search & Website
-                </div>
+              <button
+                class="portfolio-shot"
+                type="button"
+                data-image="images/yelplisting.png"
+                data-caption="Local business listing management"
+                aria-label="View Yelp listing screenshot"
+              >
+                <img
+                  src="images/yelplisting.png"
+                  alt="Local business Yelp listing"
+                  loading="lazy"
+                >
+                <span class="shot-caption">
+                  Business Listings
+                </span>
+              </button>
 
-                <div class="mockup-subheading">
-                  Temporary visual · replace with website / SEO screenshots later
-                </div>
-
-                <div class="seo-layout">
-
-                  <div class="seo-panel">
-
-                    <div class="search-result">
-                      <div class="search-title"></div>
-                      <div class="search-url"></div>
-                      <div class="fake-line"></div>
-                      <div class="fake-line medium"></div>
-                    </div>
-
-                    <div class="search-result">
-                      <div class="search-title" style="width:60%;"></div>
-                      <div class="search-url"></div>
-                      <div class="fake-line"></div>
-                      <div class="fake-line short"></div>
-                    </div>
-
-                    <div class="search-result">
-                      <div class="search-title" style="width:78%;"></div>
-                      <div class="search-url"></div>
-                      <div class="fake-line medium"></div>
-                    </div>
-
-                  </div>
-
-
-                  <div class="map-box">
-                    <div class="map-pin pin-1"></div>
-                    <div class="map-pin pin-2"></div>
-                    <div class="map-pin pin-3"></div>
-                  </div>
-
-                </div>
-
-              </div>
+              <button
+                class="portfolio-shot"
+                type="button"
+                data-image="images/seoprogresstracker.png"
+                data-caption="Local search baseline and SEO progress tracking"
+                aria-label="View SEO progress tracker screenshot"
+              >
+                <img
+                  src="images/seoprogresstracker.png"
+                  alt="Local search and SEO progress tracker"
+                  loading="lazy"
+                >
+                <span class="shot-caption">
+                  SEO Progress Tracking
+                </span>
+              </button>
 
             </div>
+
+            <p class="gallery-note">
+              Website and local search work samples. Click an image to enlarge.
+            </p>
 
           </div>
 
@@ -2023,8 +1628,8 @@
             <p>
               Supported the digital presence of a local service
               business through website management, local search
-              initiatives, business listings, social content,
-              and outbound research.
+              initiatives, business listings, location pages,
+              tracking, and ongoing optimization work.
             </p>
 
             <ul class="case-points">
@@ -2032,19 +1637,20 @@
               <li>
                 <strong>Challenge:</strong>
                 Strengthen and maintain the company's online presence
-                across website and local search channels.
+                across its website and local search channels.
               </li>
 
               <li>
                 <strong>Approach:</strong>
-                Updated Wix content, supported location pages,
-                local SEO, business listings, and backlink research.
+                Updated Wix content, worked on service-area pages,
+                maintained business listings, researched backlink
+                opportunities, and tracked local search progress.
               </li>
 
               <li>
                 <strong>Outcome:</strong>
-                Built a stronger foundation for ongoing website,
-                search, social media, and outreach initiatives.
+                Built a more organized foundation for ongoing website
+                and local search initiatives.
               </li>
 
             </ul>
@@ -2053,7 +1659,203 @@
               <span class="tag">Wix</span>
               <span class="tag">Local SEO</span>
               <span class="tag">Google Business Profile</span>
-              <span class="tag">Canva</span>
+              <span class="tag">Business Listings</span>
+              <span class="tag">SEO Tracking</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- CASE STUDY 5 -->
+
+      <article class="case-study fade-up">
+
+        <div class="case-grid">
+
+          <div class="case-visual">
+
+            <div class="portfolio-gallery">
+
+              <button
+                class="portfolio-shot"
+                type="button"
+                data-image="images/socialmediainsights.png"
+                data-caption="Social media performance monitoring and insights"
+                aria-label="View social media insights screenshot"
+              >
+                <img
+                  src="images/socialmediainsights.png"
+                  alt="Social media performance insights"
+                  loading="lazy"
+                >
+                <span class="shot-caption">
+                  Performance & Insights
+                </span>
+              </button>
+
+              <button
+                class="portfolio-shot"
+                type="button"
+                data-image="images/contentcalendar.png"
+                data-caption="Social media content planning and calendar management"
+                aria-label="View content calendar screenshot"
+              >
+                <img
+                  src="images/contentcalendar.png"
+                  alt="Social media content calendar"
+                  loading="lazy"
+                >
+                <span class="shot-caption">
+                  Content Planning
+                </span>
+              </button>
+
+            </div>
+
+            <p class="gallery-note">
+              Social media planning and performance samples. Click an image to enlarge.
+            </p>
+
+          </div>
+
+
+          <div class="case-content">
+
+            <div class="project-label">
+              Social Media & Content
+            </div>
+
+            <h3>
+              Content Planning & Performance Support
+            </h3>
+
+            <p>
+              Supported social media operations through content
+              planning, calendar organization, publishing workflows,
+              and performance monitoring.
+            </p>
+
+            <ul class="case-points">
+
+              <li>
+                <strong>Challenge:</strong>
+                Keep content organized while maintaining visibility
+                into publishing schedules and performance.
+              </li>
+
+              <li>
+                <strong>Approach:</strong>
+                Organized content calendars, supported post planning,
+                maintained publishing information, and reviewed
+                platform insights.
+              </li>
+
+              <li>
+                <strong>Outcome:</strong>
+                Created a clearer workflow for planning, organizing,
+                and reviewing social media activity.
+              </li>
+
+            </ul>
+
+            <div class="tags">
+              <span class="tag">Meta Business Suite</span>
+              <span class="tag">Notion</span>
+              <span class="tag">Content Planning</span>
+              <span class="tag">Social Media</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- CASE STUDY 6 -->
+
+      <article class="case-study fade-up">
+
+        <div class="case-grid">
+
+          <div class="case-visual">
+
+            <div class="portfolio-gallery single">
+
+              <button
+                class="portfolio-shot"
+                type="button"
+                data-image="images/leadlist.png"
+                data-caption="Construction lead research and outreach database"
+                aria-label="View construction lead list screenshot"
+              >
+                <img
+                  src="images/leadlist.png"
+                  alt="Construction lead research and outreach spreadsheet"
+                  loading="lazy"
+                >
+                <span class="shot-caption">
+                  Lead Research & Outreach Database
+                </span>
+              </button>
+
+            </div>
+
+            <p class="gallery-note">
+              Research and outreach workflow sample. Click to enlarge.
+            </p>
+
+          </div>
+
+
+          <div class="case-content">
+
+            <div class="project-label">
+              Research & Outreach
+            </div>
+
+            <h3>
+              Lead Research & Campaign Organization
+            </h3>
+
+            <p>
+              Built and maintained structured prospect lists to
+              support business development and outbound outreach
+              for a local service business.
+            </p>
+
+            <ul class="case-points">
+
+              <li>
+                <strong>Challenge:</strong>
+                Identify relevant companies and organize the
+                information needed for targeted outreach.
+              </li>
+
+              <li>
+                <strong>Approach:</strong>
+                Researched companies, target areas, decision-makers,
+                contact information, company fit, and supporting
+                information for outreach.
+              </li>
+
+              <li>
+                <strong>Outcome:</strong>
+                Created an organized lead database that could support
+                structured email and follow-up campaigns.
+              </li>
+
+            </ul>
+
+            <div class="tags">
+              <span class="tag">Lead Research</span>
+              <span class="tag">Google Sheets</span>
+              <span class="tag">Outreach</span>
+              <span class="tag">Data Organization</span>
             </div>
 
           </div>
@@ -2508,11 +2310,51 @@
   </footer>
 
 
+  <!-- IMAGE LIGHTBOX -->
+
+  <div
+    class="lightbox"
+    id="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Portfolio image preview"
+  >
+
+    <div class="lightbox-inner">
+
+      <img
+        src=""
+        alt=""
+        class="lightbox-image"
+        id="lightboxImage"
+      >
+
+    </div>
+
+    <button
+      type="button"
+      class="lightbox-close"
+      id="lightboxClose"
+      aria-label="Close image preview"
+    >
+      ×
+    </button>
+
+    <div
+      class="lightbox-caption"
+      id="lightboxCaption"
+    ></div>
+
+  </div>
+
+
   <script>
 
     document.getElementById("year").textContent =
       new Date().getFullYear();
 
+
+    /* MOBILE MENU */
 
     const menuButton =
       document.getElementById("menuButton");
@@ -2556,6 +2398,8 @@
 
       });
 
+
+    /* SCROLL ANIMATIONS */
 
     const reduceMotion =
       window.matchMedia(
@@ -2614,6 +2458,111 @@
         });
 
     }
+
+
+    /* PORTFOLIO IMAGE LIGHTBOX */
+
+    const lightbox =
+      document.getElementById("lightbox");
+
+    const lightboxImage =
+      document.getElementById("lightboxImage");
+
+    const lightboxCaption =
+      document.getElementById("lightboxCaption");
+
+    const lightboxClose =
+      document.getElementById("lightboxClose");
+
+
+    function openLightbox(button) {
+
+      const image =
+        button.getAttribute("data-image");
+
+      const caption =
+        button.getAttribute("data-caption") || "";
+
+      lightboxImage.src = image;
+
+      lightboxImage.alt = caption;
+
+      lightboxCaption.textContent = caption;
+
+      lightbox.classList.add("open");
+
+      document.body.classList.add("modal-open");
+
+      lightboxClose.focus();
+
+    }
+
+
+    function closeLightbox() {
+
+      lightbox.classList.remove("open");
+
+      document.body.classList.remove("modal-open");
+
+      lightboxImage.src = "";
+
+    }
+
+
+    document
+      .querySelectorAll(".portfolio-shot")
+      .forEach(function(button) {
+
+        button.addEventListener(
+          "click",
+          function() {
+
+            openLightbox(button);
+
+          }
+        );
+
+      });
+
+
+    lightboxClose.addEventListener(
+      "click",
+      closeLightbox
+    );
+
+
+    lightbox.addEventListener(
+      "click",
+      function(event) {
+
+        if (
+          event.target === lightbox ||
+          event.target.classList.contains("lightbox-inner")
+        ) {
+
+          closeLightbox();
+
+        }
+
+      }
+    );
+
+
+    document.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (
+          event.key === "Escape" &&
+          lightbox.classList.contains("open")
+        ) {
+
+          closeLightbox();
+
+        }
+
+      }
+    );
 
   </script>
 
